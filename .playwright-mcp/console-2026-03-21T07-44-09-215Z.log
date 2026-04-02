@@ -1,0 +1,2 @@
+[      36ms] [WARNING] The value "390px" for key "width" was truncated to its numeric prefix. @ http://localhost:8765/01-login.html:4
+[     316ms] [ERROR] Failed to load resource: the server responded with a status of 404 (File not found) @ http://localhost:8765/favicon.ico:0

@@ -1,0 +1,2 @@
+[      13ms] [WARNING] The value "390px" for key "width" was truncated to its numeric prefix. @ http://localhost:8765/02-signup.html#figmacapture=033c0318-2a92-4f31-b76e-09c3278e07b5&figmaendpoint=https%3A%2F%2Fmcp.figma.com%2Fmcp%2Fcapture%2F033c0318-2a92-4f31-b76e-09c3278e07b5%2Fsubmit&figmadelay=2000:4
+[      88ms] [ERROR] Failed to load resource: the server responded with a status of 404 (File not found) @ http://localhost:8765/favicon.ico:0
