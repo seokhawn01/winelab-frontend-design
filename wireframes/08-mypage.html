@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=390px, initial-scale=1.0">
+<title>WineLab — 마이페이지</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+* { font-family: 'Noto Sans KR', sans-serif; }
+.radar-axis { stroke: #E8D5C4; stroke-width: 1; fill: none; }
+.radar-shape { fill: rgba(114,47,55,0.15); stroke: #722f37; stroke-width: 2; }
+.calendar-day { width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; font-size: 12px; border-radius: 50%; cursor: pointer; }
+.calendar-day.has-wine { background: #f0e0d0; color: #722f37; font-weight: 700; }
+.calendar-day.selected { background: #722f37; color: white; font-weight: 700; }
+.calendar-day.today { border: 2px solid #722f37; color: #722f37; font-weight: 700; }
+</style>
+</head>
+<body class="bg-gray-200 flex justify-center items-start min-h-screen py-8">
+
+<div class="w-[390px] min-h-[844px] bg-[#FFF8F0] flex flex-col overflow-hidden shadow-2xl rounded-3xl relative">
+
+  <!-- 상태바 -->
+  <div class="bg-[#722f37] h-11 flex items-center justify-between px-5 flex-shrink-0">
+    <span class="text-white text-sm font-semibold">9:41</span>
+    <div class="w-[17px] h-[10px] border border-white rounded-sm relative">
+      <div class="absolute inset-[1.5px] bg-white rounded-sm"></div>
+    </div>
+  </div>
+
+  <!-- 헤더 -->
+  <div class="bg-[#722f37] px-5 pt-4 pb-5 flex items-center justify-between flex-shrink-0">
+    <div>
+      <p class="text-white/70 text-xs">내 계정</p>
+      <h1 class="text-white font-bold text-lg">👤 마이페이지</h1>
+    </div>
+    <div class="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
+      <span class="text-xl">😊</span>
+    </div>
+  </div>
+
+  <!-- 탭 (shadcn tabs) -->
+  <div class="bg-white border-b border-[#E8D5C4] px-4 flex-shrink-0">
+    <div class="flex">
+      <button class="flex-1 py-3 text-xs font-semibold text-[#8B6B6B] border-b-2 border-transparent">취향</button>
+      <button class="flex-1 py-3 text-xs font-bold text-[#722f37] border-b-2 border-[#722f37]">캘린더 ✓</button>
+      <button class="flex-1 py-3 text-xs font-semibold text-[#8B6B6B] border-b-2 border-transparent">컬렉션</button>
+    </div>
+  </div>
+
+  <!-- 스크롤 콘텐츠 -->
+  <div class="flex-1 overflow-y-auto pb-24">
+
+    <!-- 캘린더 카드 (shadcn card) -->
+    <div class="mx-4 mt-4 bg-white rounded-2xl border border-[#E8D5C4] shadow-sm overflow-hidden">
+
+      <!-- 월 네비게이션 -->
+      <div class="flex items-center justify-between px-4 py-3 border-b border-[#E8D5C4]">
+        <button class="w-8 h-8 rounded-full bg-[#f9ede4] flex items-center justify-center text-[#722f37] font-bold">◀</button>
+        <span class="text-sm font-bold text-[#2a1818]">2026년 3월</span>
+        <button class="w-8 h-8 rounded-full bg-[#f9ede4] flex items-center justify-center text-[#722f37] font-bold">▶</button>
+      </div>
+
+      <!-- 요일 헤더 -->
+      <div class="grid grid-cols-7 px-2 pt-2">
+        <div class="text-center text-[10px] font-semibold text-[#B09090] py-1">월</div>
+        <div class="text-center text-[10px] font-semibold text-[#B09090] py-1">화</div>
+        <div class="text-center text-[10px] font-semibold text-[#B09090] py-1">수</div>
+        <div class="text-center text-[10px] font-semibold text-[#B09090] py-1">목</div>
+        <div class="text-center text-[10px] font-semibold text-[#B09090] py-1">금</div>
+        <div class="text-center text-[10px] font-semibold text-[#B09090] py-1 text-blue-400">토</div>
+        <div class="text-center text-[10px] font-semibold text-[#B09090] py-1 text-red-400">일</div>
+      </div>
+
+      <!-- 날짜 그리드 -->
+      <div class="grid grid-cols-7 px-2 pb-3 gap-y-1">
+        <!-- 1주 (공백 + 1~2일) -->
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div class="calendar-day">1</div>
+        <div class="calendar-day">2</div>
+        <!-- 2주 -->
+        <div class="calendar-day">3</div>
+        <div class="calendar-day">4</div>
+        <div class="calendar-day">5</div>
+        <div class="calendar-day">6</div>
+        <div class="calendar-day">7</div>
+        <div class="calendar-day">8</div>
+        <div class="calendar-day">9</div>
+        <!-- 3주 -->
+        <div class="calendar-day">10</div>
+        <div class="calendar-day">11</div>
+        <div class="calendar-day">12</div>
+        <div class="calendar-day">13</div>
+        <div class="calendar-day">14</div>
+        <div class="calendar-day has-wine text-xs">
+          <div class="flex flex-col items-center">
+            <span>15</span>
+            <span style="font-size:8px">🍷</span>
+          </div>
+        </div>
+        <div class="calendar-day">16</div>
+        <!-- 4주 -->
+        <div class="calendar-day">17</div>
+        <div class="calendar-day">18</div>
+        <div class="calendar-day">19</div>
+        <div class="calendar-day has-wine">
+          <div class="flex flex-col items-center">
+            <span>20</span>
+            <span style="font-size:8px">🍷</span>
+          </div>
+        </div>
+        <div class="calendar-day today">21</div>
+        <div class="calendar-day selected">
+          <div class="flex flex-col items-center">
+            <span>22</span>
+            <span style="font-size:8px">🍷</span>
+          </div>
+        </div>
+        <div class="calendar-day">23</div>
+        <!-- 5주 -->
+        <div class="calendar-day">24</div>
+        <div class="calendar-day">25</div>
+        <div class="calendar-day">26</div>
+        <div class="calendar-day">27</div>
+        <div class="calendar-day">28</div>
+        <div class="calendar-day">29</div>
+        <div class="calendar-day">30</div>
+        <!-- 6주 -->
+        <div class="calendar-day">31</div>
+      </div>
+
+    </div>
+
+    <!-- 선택된 날 기록 -->
+    <div class="mx-4 mt-3">
+      <div class="flex items-center justify-between mb-2.5">
+        <h3 class="text-sm font-bold text-[#2a1818]">3월 22일 마신 와인</h3>
+        <span class="text-[10px] text-[#8B6B6B]">토요일</span>
+      </div>
+
+      <!-- 와인 기록 카드 -->
+      <div class="bg-white rounded-2xl border border-[#E8D5C4] shadow-sm p-4 flex items-center gap-3">
+        <div class="w-[48px] h-[64px] bg-[#f0e0d0] rounded-xl flex items-center justify-center flex-shrink-0">
+          <span class="text-2xl">🍷</span>
+        </div>
+        <div class="flex-1">
+          <p class="text-[#2a1818] font-bold text-sm">까베르네 소비뇽 2021</p>
+          <p class="text-[#8B6B6B] text-[11px] mt-0.5">나파 밸리, 캘리포니아</p>
+          <div class="flex items-center gap-1.5 mt-2">
+            <span class="text-[9px] bg-[#f0e0d0] text-[#722f37] px-2 py-0.5 rounded-full font-medium">리뷰 미작성</span>
+          </div>
+        </div>
+        <a href="09-review.html">
+          <button class="px-3 py-2 bg-[#722f37] text-white rounded-xl text-[11px] font-bold flex-shrink-0">
+            리뷰<br>작성
+          </button>
+        </a>
+      </div>
+
+      <!-- 두 번째 와인 기록 -->
+      <div class="bg-white rounded-2xl border border-[#E8D5C4] shadow-sm p-4 flex items-center gap-3 mt-2.5">
+        <div class="w-[48px] h-[64px] bg-[#f0e0d0] rounded-xl flex items-center justify-center flex-shrink-0">
+          <span class="text-2xl">🍾</span>
+        </div>
+        <div class="flex-1">
+          <p class="text-[#2a1818] font-bold text-sm">말벡 리저브 2020</p>
+          <p class="text-[#8B6B6B] text-[11px] mt-0.5">멘도사, 아르헨티나</p>
+          <div class="flex items-center gap-1.5 mt-2">
+            <span class="text-[9px] bg-[#e8f5e9] text-green-700 px-2 py-0.5 rounded-full font-medium">리뷰 완료 ✓</span>
+          </div>
+        </div>
+        <button class="px-3 py-2 bg-white border border-[#E8D5C4] text-[#8B6B6B] rounded-xl text-[11px] font-medium flex-shrink-0">
+          보기
+        </button>
+      </div>
+
+    </div>
+
+    <!-- 이달 통계 -->
+    <div class="mx-4 mt-3 mb-4 bg-white rounded-2xl border border-[#E8D5C4] shadow-sm p-4">
+      <h3 class="text-xs font-bold text-[#2a1818] mb-3">3월 와인 기록 요약</h3>
+      <div class="flex items-center justify-around">
+        <div class="text-center">
+          <p class="text-2xl font-extrabold text-[#722f37]">3</p>
+          <p class="text-[10px] text-[#8B6B6B] mt-0.5">마신 와인</p>
+        </div>
+        <div class="w-px h-8 bg-[#E8D5C4]"></div>
+        <div class="text-center">
+          <p class="text-2xl font-extrabold text-[#722f37]">2</p>
+          <p class="text-[10px] text-[#8B6B6B] mt-0.5">리뷰 작성</p>
+        </div>
+        <div class="w-px h-8 bg-[#E8D5C4]"></div>
+        <div class="text-center">
+          <p class="text-2xl font-extrabold text-[#C5A028]">레드</p>
+          <p class="text-[10px] text-[#8B6B6B] mt-0.5">선호 종류</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- 하단 네비 -->
+  <nav class="absolute bottom-0 left-0 right-0 bg-white border-t border-[#E8D5C4] h-[72px] flex items-start pt-2.5">
+    <a href="04-home.html" class="flex-1 flex flex-col items-center gap-1">
+      <span class="text-xl">🏠</span>
+      <span class="text-[10px] font-medium text-[#B09090]">홈</span>
+    </a>
+    <a href="07-search.html" class="flex-1 flex flex-col items-center gap-1">
+      <span class="text-xl">🔍</span>
+      <span class="text-[10px] font-medium text-[#B09090]">검색</span>
+    </a>
+    <a href="10-ocr.html" class="flex-1 flex flex-col items-center gap-1">
+      <span class="text-xl">📷</span>
+      <span class="text-[10px] font-medium text-[#B09090]">스캔</span>
+    </a>
+    <a href="08-mypage.html" class="flex-1 flex flex-col items-center gap-1">
+      <span class="text-xl">👤</span>
+      <span class="text-[10px] font-bold text-[#722f37]">마이페이지</span>
+    </a>
+  </nav>
+
+</div>
+
+<div class="fixed bottom-4 left-1/2 -translate-x-1/2 bg-black/80 text-white text-xs px-4 py-2 rounded-full flex gap-3">
+  <a href="07-search.html" class="hover:underline">← 07 검색</a>
+  <span>|</span>
+  <span class="font-semibold opacity-70">08 마이페이지</span>
+  <span>|</span>
+  <a href="09-review.html" class="hover:underline">09 리뷰 →</a>
+</div>
+
+</body>
+</html>

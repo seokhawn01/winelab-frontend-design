@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=390px, initial-scale=1.0">
+<title>WineLab — 홈</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+* { font-family: 'Noto Sans KR', sans-serif; }
+.scrollbar-hide::-webkit-scrollbar { display: none; }
+.scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+</style>
+</head>
+<body class="bg-gray-200 flex justify-center items-start min-h-screen py-8">
+
+<div class="w-[390px] min-h-[844px] bg-[#FFF8F0] flex flex-col overflow-hidden shadow-2xl rounded-3xl relative">
+
+  <!-- 상태바 -->
+  <div class="bg-[#722f37] h-11 flex items-center justify-between px-5 flex-shrink-0">
+    <span class="text-white text-sm font-semibold">9:41</span>
+    <div class="w-[17px] h-[10px] border border-white rounded-sm relative">
+      <div class="absolute inset-[1.5px] bg-white rounded-sm"></div>
+    </div>
+  </div>
+
+  <!-- 헤더 -->
+  <div class="bg-[#722f37] px-5 pt-4 pb-6 flex-shrink-0">
+    <p class="text-white/70 text-xs mb-1">안녕하세요, 지수님 👋</p>
+    <h1 class="text-white text-2xl font-extrabold mb-4">오늘 뭐 드세요?</h1>
+    <!-- 검색바 (shadcn input 스타일) -->
+    <div class="flex items-center gap-2 bg-white/15 border border-white/30 rounded-xl h-11 px-3">
+      <span class="text-white/70 text-sm">🔍</span>
+      <input
+        type="text"
+        placeholder="음식을 검색하거나 선택해보세요"
+        class="flex-1 bg-transparent text-white placeholder-white/60 text-sm"
+        style="outline:none; border:none;"
+      />
+    </div>
+  </div>
+
+  <!-- 카테고리 칩 (가로 스크롤) -->
+  <div class="flex gap-2 px-4 py-3 overflow-x-auto scrollbar-hide flex-shrink-0 bg-white border-b border-[#E8D5C4]">
+    <!-- 활성 -->
+    <button class="flex-shrink-0 h-9 px-4 rounded-full text-xs font-semibold bg-[#722f37] text-white border border-[#722f37]">🍚 한식</button>
+    <button class="flex-shrink-0 h-9 px-4 rounded-full text-xs font-medium bg-white text-[#8B6B6B] border border-[#E8D5C4]">🍝 양식</button>
+    <button class="flex-shrink-0 h-9 px-4 rounded-full text-xs font-medium bg-white text-[#8B6B6B] border border-[#E8D5C4]">🍣 일식</button>
+    <button class="flex-shrink-0 h-9 px-4 rounded-full text-xs font-medium bg-white text-[#8B6B6B] border border-[#E8D5C4]">🥟 중식</button>
+    <button class="flex-shrink-0 h-9 px-4 rounded-full text-xs font-medium bg-white text-[#8B6B6B] border border-[#E8D5C4]">🌮 기타</button>
+  </div>
+
+  <!-- 음식 그리드 -->
+  <div class="flex-1 overflow-y-auto px-4 pt-4 pb-24">
+
+    <!-- 섹션 타이틀 -->
+    <h2 class="text-[#2a1818] text-sm font-bold mb-3 flex items-center gap-1.5">
+      <span>🔥</span> 인기 한식 메뉴
+    </h2>
+
+    <!-- 3열 그리드 (shadcn card 스타일) -->
+    <div class="grid grid-cols-3 gap-2.5 mb-6">
+
+      <!-- 삼겹살 -->
+      <a href="05-recommend.html">
+        <div class="bg-white rounded-2xl border border-[#f0e0d0] overflow-hidden shadow-sm active:scale-95 transition-transform">
+          <div class="h-[78px] bg-[#f9ede4] flex items-center justify-center">
+            <span class="text-3xl">🥩</span>
+          </div>
+          <div class="px-2 py-2 text-center">
+            <span class="text-[#2a1818] text-[11px] font-bold">삼겹살</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- 갈비찜 -->
+      <div class="bg-white rounded-2xl border border-[#f0e0d0] overflow-hidden shadow-sm">
+        <div class="h-[78px] bg-[#f9ede4] flex items-center justify-center">
+          <span class="text-3xl">🍖</span>
+        </div>
+        <div class="px-2 py-2 text-center">
+          <span class="text-[#2a1818] text-[11px] font-bold">갈비찜</span>
+        </div>
+      </div>
+
+      <!-- 김치찌개 -->
+      <div class="bg-white rounded-2xl border border-[#f0e0d0] overflow-hidden shadow-sm">
+        <div class="h-[78px] bg-[#f9ede4] flex items-center justify-center">
+          <span class="text-3xl">🥘</span>
+        </div>
+        <div class="px-2 py-2 text-center">
+          <span class="text-[#2a1818] text-[11px] font-bold">김치찌개</span>
+        </div>
+      </div>
+
+      <!-- 불고기 -->
+      <div class="bg-white rounded-2xl border border-[#f0e0d0] overflow-hidden shadow-sm">
+        <div class="h-[78px] bg-[#f9ede4] flex items-center justify-center">
+          <span class="text-3xl">🍲</span>
+        </div>
+        <div class="px-2 py-2 text-center">
+          <span class="text-[#2a1818] text-[11px] font-bold">불고기</span>
+        </div>
+      </div>
+
+      <!-- 해물파전 -->
+      <div class="bg-white rounded-2xl border border-[#f0e0d0] overflow-hidden shadow-sm">
+        <div class="h-[78px] bg-[#f9ede4] flex items-center justify-center">
+          <span class="text-3xl">🦑</span>
+        </div>
+        <div class="px-2 py-2 text-center">
+          <span class="text-[#2a1818] text-[11px] font-bold">해물파전</span>
+        </div>
+      </div>
+
+      <!-- 된장찌개 -->
+      <div class="bg-white rounded-2xl border border-[#f0e0d0] overflow-hidden shadow-sm">
+        <div class="h-[78px] bg-[#f9ede4] flex items-center justify-center">
+          <span class="text-3xl">🍜</span>
+        </div>
+        <div class="px-2 py-2 text-center">
+          <span class="text-[#2a1818] text-[11px] font-bold">된장찌개</span>
+        </div>
+      </div>
+
+      <!-- 잡채 -->
+      <div class="bg-white rounded-2xl border border-[#f0e0d0] overflow-hidden shadow-sm">
+        <div class="h-[78px] bg-[#f9ede4] flex items-center justify-center">
+          <span class="text-3xl">🥗</span>
+        </div>
+        <div class="px-2 py-2 text-center">
+          <span class="text-[#2a1818] text-[11px] font-bold">잡채</span>
+        </div>
+      </div>
+
+      <!-- 찜닭 -->
+      <div class="bg-white rounded-2xl border border-[#f0e0d0] overflow-hidden shadow-sm">
+        <div class="h-[78px] bg-[#f9ede4] flex items-center justify-center">
+          <span class="text-3xl">🍗</span>
+        </div>
+        <div class="px-2 py-2 text-center">
+          <span class="text-[#2a1818] text-[11px] font-bold">찜닭</span>
+        </div>
+      </div>
+
+      <!-- 계란찜 -->
+      <div class="bg-white rounded-2xl border border-[#f0e0d0] overflow-hidden shadow-sm">
+        <div class="h-[78px] bg-[#f9ede4] flex items-center justify-center">
+          <span class="text-3xl">🥚</span>
+        </div>
+        <div class="px-2 py-2 text-center">
+          <span class="text-[#2a1818] text-[11px] font-bold">계란찜</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 하단 네비 (shadcn bottom tab bar) -->
+  <nav class="absolute bottom-0 left-0 right-0 bg-white border-t border-[#E8D5C4] h-[72px] flex items-start pt-2.5">
+    <a href="04-home.html" class="flex-1 flex flex-col items-center gap-1">
+      <span class="text-xl">🏠</span>
+      <span class="text-[10px] font-bold text-[#722f37]">홈</span>
+    </a>
+    <a href="07-search.html" class="flex-1 flex flex-col items-center gap-1">
+      <span class="text-xl">🔍</span>
+      <span class="text-[10px] font-medium text-[#B09090]">검색</span>
+    </a>
+    <a href="10-ocr.html" class="flex-1 flex flex-col items-center gap-1">
+      <span class="text-xl">📷</span>
+      <span class="text-[10px] font-medium text-[#B09090]">스캔</span>
+    </a>
+    <a href="08-mypage.html" class="flex-1 flex flex-col items-center gap-1">
+      <span class="text-xl">👤</span>
+      <span class="text-[10px] font-medium text-[#B09090]">마이페이지</span>
+    </a>
+  </nav>
+
+</div>
+
+<div class="fixed bottom-4 left-1/2 -translate-x-1/2 bg-black/80 text-white text-xs px-4 py-2 rounded-full flex gap-3">
+  <a href="03-onboarding.html" class="hover:underline">← 03 온보딩</a>
+  <span>|</span>
+  <span class="font-semibold opacity-70">04 홈</span>
+  <span>|</span>
+  <a href="05-recommend.html" class="hover:underline">05 추천 →</a>
+</div>
+
+</body>
+</html>

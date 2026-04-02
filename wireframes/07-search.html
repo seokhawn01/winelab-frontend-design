@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=390px, initial-scale=1.0">
+<title>WineLab — 와인 검색</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+* { font-family: 'Noto Sans KR', sans-serif; }
+.scrollbar-hide::-webkit-scrollbar { display: none; }
+.scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+</style>
+</head>
+<body class="bg-gray-200 flex justify-center items-start min-h-screen py-8">
+
+<div class="w-[390px] min-h-[844px] bg-[#FFF8F0] flex flex-col overflow-hidden shadow-2xl rounded-3xl relative">
+
+  <!-- 상태바 -->
+  <div class="bg-[#722f37] h-11 flex items-center justify-between px-5 flex-shrink-0">
+    <span class="text-white text-sm font-semibold">9:41</span>
+    <div class="w-[17px] h-[10px] border border-white rounded-sm relative">
+      <div class="absolute inset-[1.5px] bg-white rounded-sm"></div>
+    </div>
+  </div>
+
+  <!-- 헤더 + 검색바 -->
+  <div class="bg-[#722f37] px-5 pt-4 pb-5 flex-shrink-0">
+    <h1 class="text-white font-bold text-lg mb-3">🔍 와인 검색</h1>
+    <!-- 검색 입력 (shadcn input) -->
+    <div class="flex items-center gap-2 bg-white rounded-xl h-11 px-3 border border-[#E8D5C4]">
+      <span class="text-[#8B6B6B] text-sm">🔍</span>
+      <input
+        type="text"
+        placeholder="와인 이름, 품종, 지역 검색..."
+        value="카베르네"
+        class="flex-1 text-sm text-[#2a1818] placeholder-[#B09090]"
+        style="outline:none; border:none; background:transparent;"
+      />
+      <button class="text-[#B09090] text-lg">✕</button>
+    </div>
+  </div>
+
+  <!-- 필터 칩 -->
+  <div class="bg-white border-b border-[#E8D5C4] px-4 py-2.5 flex gap-2 overflow-x-auto scrollbar-hide flex-shrink-0">
+    <button class="flex-shrink-0 h-8 px-3 rounded-full text-[11px] font-semibold bg-[#722f37] text-white border border-[#722f37]">전체</button>
+    <button class="flex-shrink-0 h-8 px-3 rounded-full text-[11px] font-medium bg-white text-[#8B6B6B] border border-[#E8D5C4]">레드</button>
+    <button class="flex-shrink-0 h-8 px-3 rounded-full text-[11px] font-medium bg-white text-[#8B6B6B] border border-[#E8D5C4]">화이트</button>
+    <button class="flex-shrink-0 h-8 px-3 rounded-full text-[11px] font-medium bg-white text-[#8B6B6B] border border-[#E8D5C4]">로제</button>
+    <button class="flex-shrink-0 h-8 px-3 rounded-full text-[11px] font-medium bg-white text-[#8B6B6B] border border-[#E8D5C4]">스파클링</button>
+  </div>
+
+  <!-- 검색 결과 -->
+  <div class="flex-1 overflow-y-auto px-4 pt-3 pb-24">
+
+    <!-- 결과 개수 -->
+    <p class="text-xs text-[#8B6B6B] mb-3 font-medium">
+      <span class="text-[#722f37] font-bold">12개</span>의 결과
+    </p>
+
+    <!-- 와인 카드 리스트 (shadcn list item 스타일) -->
+    <div class="flex flex-col gap-2.5">
+
+      <!-- 아이템 1 -->
+      <a href="06-wine-detail.html">
+        <div class="bg-white rounded-2xl border border-[#E8D5C4] shadow-sm p-4 flex items-center gap-3 active:bg-[#FFF8F0] transition-colors">
+          <div class="w-[48px] h-[64px] bg-[#f0e0d0] rounded-xl flex items-center justify-center flex-shrink-0">
+            <span class="text-2xl">🍷</span>
+          </div>
+          <div class="flex-1 min-w-0">
+            <div class="flex items-start justify-between gap-1">
+              <p class="text-[#2a1818] font-bold text-sm leading-tight">까베르네 소비뇽 2021</p>
+              <span class="flex-shrink-0 text-[10px] bg-[#f0e0d0] text-[#722f37] px-2 py-0.5 rounded-full font-semibold">레드</span>
+            </div>
+            <p class="text-[#8B6B6B] text-[11px] mt-0.5">나파 밸리 · 까베르네 소비뇽</p>
+            <div class="flex items-center gap-1 mt-1.5">
+              <span class="text-[#C5A028] text-xs">★</span>
+              <span class="text-xs font-bold text-[#2a1818]">4.2</span>
+              <span class="text-[#B09090] text-[10px]">Vivino</span>
+              <span class="text-[#B09090] text-[10px] ml-1">· 탄닌 4.0 · 산미 3.5</span>
+            </div>
+          </div>
+          <span class="text-[#B09090] text-sm">›</span>
+        </div>
+      </a>
+
+      <!-- 아이템 2 -->
+      <a href="06-wine-detail.html">
+        <div class="bg-white rounded-2xl border border-[#E8D5C4] shadow-sm p-4 flex items-center gap-3">
+          <div class="w-[48px] h-[64px] bg-[#f0e0d0] rounded-xl flex items-center justify-center flex-shrink-0">
+            <span class="text-2xl">🍷</span>
+          </div>
+          <div class="flex-1 min-w-0">
+            <div class="flex items-start justify-between gap-1">
+              <p class="text-[#2a1818] font-bold text-sm leading-tight">카베르네 프랑 2020</p>
+              <span class="flex-shrink-0 text-[10px] bg-[#f0e0d0] text-[#722f37] px-2 py-0.5 rounded-full font-semibold">레드</span>
+            </div>
+            <p class="text-[#8B6B6B] text-[11px] mt-0.5">루아르 밸리 · 프랑스</p>
+            <div class="flex items-center gap-1 mt-1.5">
+              <span class="text-[#C5A028] text-xs">★</span>
+              <span class="text-xs font-bold text-[#2a1818]">4.0</span>
+              <span class="text-[#B09090] text-[10px]">Vivino</span>
+              <span class="text-[#B09090] text-[10px] ml-1">· 탄닌 3.2 · 산미 4.0</span>
+            </div>
+          </div>
+          <span class="text-[#B09090] text-sm">›</span>
+        </div>
+      </a>
+
+      <!-- 아이템 3 -->
+      <a href="06-wine-detail.html">
+        <div class="bg-white rounded-2xl border border-[#E8D5C4] shadow-sm p-4 flex items-center gap-3">
+          <div class="w-[48px] h-[64px] bg-[#f0e0d0] rounded-xl flex items-center justify-center flex-shrink-0">
+            <span class="text-2xl">🍷</span>
+          </div>
+          <div class="flex-1 min-w-0">
+            <div class="flex items-start justify-between gap-1">
+              <p class="text-[#2a1818] font-bold text-sm leading-tight">카베르네 소비뇽 오퍼스 원</p>
+              <span class="flex-shrink-0 text-[10px] bg-[#f0e0d0] text-[#722f37] px-2 py-0.5 rounded-full font-semibold">레드</span>
+            </div>
+            <p class="text-[#8B6B6B] text-[11px] mt-0.5">나파 밸리 · 미국</p>
+            <div class="flex items-center gap-1 mt-1.5">
+              <span class="text-[#C5A028] text-xs">★</span>
+              <span class="text-xs font-bold text-[#2a1818]">4.8</span>
+              <span class="text-[#B09090] text-[10px]">Vivino</span>
+              <span class="text-[#B09090] text-[10px] ml-1">· 탄닌 4.5 · 바디 4.8</span>
+            </div>
+          </div>
+          <span class="text-[#B09090] text-sm">›</span>
+        </div>
+      </a>
+
+      <!-- 아이템 4 -->
+      <a href="06-wine-detail.html">
+        <div class="bg-white rounded-2xl border border-[#E8D5C4] shadow-sm p-4 flex items-center gap-3">
+          <div class="w-[48px] h-[64px] bg-[#f0e0d0] rounded-xl flex items-center justify-center flex-shrink-0">
+            <span class="text-2xl">🍷</span>
+          </div>
+          <div class="flex-1 min-w-0">
+            <div class="flex items-start justify-between gap-1">
+              <p class="text-[#2a1818] font-bold text-sm leading-tight">사시카이아 카베르네 2019</p>
+              <span class="flex-shrink-0 text-[10px] bg-[#f0e0d0] text-[#722f37] px-2 py-0.5 rounded-full font-semibold">레드</span>
+            </div>
+            <p class="text-[#8B6B6B] text-[11px] mt-0.5">토스카나 · 이탈리아</p>
+            <div class="flex items-center gap-1 mt-1.5">
+              <span class="text-[#C5A028] text-xs">★</span>
+              <span class="text-xs font-bold text-[#2a1818]">4.6</span>
+              <span class="text-[#B09090] text-[10px]">Vivino</span>
+              <span class="text-[#B09090] text-[10px] ml-1">· 탄닌 4.2 · 산미 3.8</span>
+            </div>
+          </div>
+          <span class="text-[#B09090] text-sm">›</span>
+        </div>
+      </a>
+
+      <!-- 더 보기 버튼 -->
+      <button class="w-full h-11 bg-white border border-[#E8D5C4] rounded-xl text-sm text-[#8B6B6B] font-medium mt-1">
+        더 보기 (8개 더)
+      </button>
+
+    </div>
+  </div>
+
+  <!-- 하단 네비 -->
+  <nav class="absolute bottom-0 left-0 right-0 bg-white border-t border-[#E8D5C4] h-[72px] flex items-start pt-2.5">
+    <a href="04-home.html" class="flex-1 flex flex-col items-center gap-1">
+      <span class="text-xl">🏠</span>
+      <span class="text-[10px] font-medium text-[#B09090]">홈</span>
+    </a>
+    <a href="07-search.html" class="flex-1 flex flex-col items-center gap-1">
+      <span class="text-xl">🔍</span>
+      <span class="text-[10px] font-bold text-[#722f37]">검색</span>
+    </a>
+    <a href="10-ocr.html" class="flex-1 flex flex-col items-center gap-1">
+      <span class="text-xl">📷</span>
+      <span class="text-[10px] font-medium text-[#B09090]">스캔</span>
+    </a>
+    <a href="08-mypage.html" class="flex-1 flex flex-col items-center gap-1">
+      <span class="text-xl">👤</span>
+      <span class="text-[10px] font-medium text-[#B09090]">마이페이지</span>
+    </a>
+  </nav>
+
+</div>
+
+<div class="fixed bottom-4 left-1/2 -translate-x-1/2 bg-black/80 text-white text-xs px-4 py-2 rounded-full flex gap-3">
+  <a href="06-wine-detail.html" class="hover:underline">← 06 상세</a>
+  <span>|</span>
+  <span class="font-semibold opacity-70">07 검색</span>
+  <span>|</span>
+  <a href="08-mypage.html" class="hover:underline">08 마이페이지 →</a>
+</div>
+
+</body>
+</html>
