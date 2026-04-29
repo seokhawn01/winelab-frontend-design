@@ -28,9 +28,6 @@ input[type="range"]::-webkit-slider-thumb {
   box-shadow: 0 2px 6px rgba(114,47,55,0.4);
   cursor: pointer;
 }
-/* 레이더 차트 SVG 스타일 */
-.radar-axis { stroke: #E8D5C4; stroke-width: 1; }
-.radar-shape { fill: rgba(114,47,55,0.2); stroke: #722f37; stroke-width: 2; }
 </style>
 </head>
 <body class="bg-gray-200 flex justify-center items-start min-h-screen py-8">
@@ -48,8 +45,9 @@ input[type="range"]::-webkit-slider-thumb {
   <!-- 헤더 -->
   <div class="bg-[#722f37] px-5 pt-4 pb-5 flex items-center justify-between">
     <div class="flex items-center gap-3">
-      <span class="text-2xl">🍷</span>
-      <h1 class="text-white font-bold text-lg">WineLab</h1>
+      <h1 class="text-white text-lg tracking-wide">
+        <span class="font-light">wine</span><span class="font-semibold">lab</span>
+      </h1>
     </div>
     <span class="text-white/70 text-sm">취향 설정</span>
   </div>
@@ -60,111 +58,124 @@ input[type="range"]::-webkit-slider-thumb {
     <p class="text-[#8B6B6B] text-xs leading-relaxed">슬라이더로 취향을 설정하거나<br>아직 잘 모른다면 건너뛸 수 있어요</p>
   </div>
 
-  <!-- 콘텐츠 2-column 레이아웃 -->
-  <div class="flex gap-3 px-4 pb-4 flex-1">
+  <!-- 취향 미리보기 + 슬라이더 -->
+  <div class="px-4 pb-4 flex-1 flex flex-col gap-3 overflow-y-auto">
 
-    <!-- 레이더 차트 -->
-    <div class="w-[130px] flex-shrink-0">
-      <div class="bg-white rounded-2xl border border-[#E8D5C4] p-3 h-full flex flex-col items-center justify-center shadow-sm">
-        <p class="text-[10px] font-semibold text-[#8B6B6B] mb-2">내 취향 차트</p>
-        <!-- SVG 레이더 차트 -->
-        <svg viewBox="0 0 120 120" class="w-[110px] h-[110px]">
-          <!-- 배경 그리드 (4각형) -->
-          <polygon points="60,15 105,60 60,105 15,60" class="radar-axis" fill="none"/>
-          <polygon points="60,30 90,60 60,90 30,60" class="radar-axis" fill="none"/>
-          <polygon points="60,45 75,60 60,75 45,60" class="radar-axis" fill="none"/>
-          <!-- 축선 -->
-          <line x1="60" y1="15" x2="60" y2="105" class="radar-axis"/>
-          <line x1="15" y1="60" x2="105" y2="60" class="radar-axis"/>
-          <!-- 데이터 영역 (탄닌 2.5, 산미 3.0, 바디감 3.5, 당도 1.5) -->
-          <!-- 위=산미, 오른쪽=바디감, 아래=당도, 왼쪽=탄닌 -->
-          <polygon points="60,27 84,60 60,84 36,60" class="radar-shape"/>
-          <!-- 축 라벨 -->
-          <text x="60" y="11" text-anchor="middle" font-size="8" fill="#722f37" font-weight="600">산미</text>
-          <text x="112" y="62" text-anchor="start" font-size="8" fill="#722f37" font-weight="600">바디</text>
-          <text x="60" y="117" text-anchor="middle" font-size="8" fill="#722f37" font-weight="600">당도</text>
-          <text x="8" y="62" text-anchor="start" font-size="8" fill="#722f37" font-weight="600">탄닌</text>
-        </svg>
-        <p class="text-[9px] text-[#B09090] mt-1 text-center">슬라이더 조작 시 실시간 반영</p>
+    <!-- 취향 미리보기 카드 (레이더 차트 대체) -->
+    <div class="bg-white rounded-2xl border border-[#E8D5C4] p-4 shadow-sm flex-shrink-0">
+      <p class="text-xs font-bold text-[#2a1818] mb-3">현재 취향 미리보기</p>
+      <div class="flex gap-3">
+        <!-- 탄닌 -->
+        <div class="flex-1 flex flex-col items-center gap-1.5">
+          <span class="text-xl leading-none">🍇</span>
+          <div class="w-full h-2 bg-[#f0e0d0] rounded-full overflow-hidden">
+            <div class="h-full bg-[#722f37] rounded-full" style="width:50%"></div>
+          </div>
+          <span class="text-[10px] font-bold text-[#722f37]">2.5</span>
+          <span class="text-[9px] text-[#B09090]">탄닌</span>
+        </div>
+        <!-- 산미 -->
+        <div class="flex-1 flex flex-col items-center gap-1.5">
+          <span class="text-xl leading-none">🍋</span>
+          <div class="w-full h-2 bg-[#f0e0d0] rounded-full overflow-hidden">
+            <div class="h-full bg-[#722f37] rounded-full" style="width:60%"></div>
+          </div>
+          <span class="text-[10px] font-bold text-[#722f37]">3.0</span>
+          <span class="text-[9px] text-[#B09090]">산미</span>
+        </div>
+        <!-- 바디감 -->
+        <div class="flex-1 flex flex-col items-center gap-1.5">
+          <span class="text-xl leading-none">⚖️</span>
+          <div class="w-full h-2 bg-[#f0e0d0] rounded-full overflow-hidden">
+            <div class="h-full bg-[#722f37] rounded-full" style="width:70%"></div>
+          </div>
+          <span class="text-[10px] font-bold text-[#722f37]">3.5</span>
+          <span class="text-[9px] text-[#B09090]">바디감</span>
+        </div>
+        <!-- 당도 -->
+        <div class="flex-1 flex flex-col items-center gap-1.5">
+          <span class="text-xl leading-none">🍯</span>
+          <div class="w-full h-2 bg-[#f0e0d0] rounded-full overflow-hidden">
+            <div class="h-full bg-[#722f37] rounded-full" style="width:30%"></div>
+          </div>
+          <span class="text-[10px] font-bold text-[#722f37]">1.5</span>
+          <span class="text-[9px] text-[#B09090]">당도</span>
+        </div>
       </div>
     </div>
 
-    <!-- 슬라이더 영역 -->
-    <div class="flex-1 flex flex-col gap-4">
-
-      <!-- 탄닌 슬라이더 -->
-      <div class="bg-white rounded-2xl border border-[#E8D5C4] p-4 shadow-sm">
-        <div class="flex items-center justify-between mb-3">
-          <div class="flex items-center gap-1.5">
-            <span class="text-base">🍇</span>
-            <span class="text-xs font-bold text-[#2a1818]">탄닌</span>
-          </div>
-          <span class="text-xs font-bold text-[#722f37] bg-[#722f37]/10 px-2 py-0.5 rounded-full">2.5</span>
+    <!-- 탄닌 슬라이더 -->
+    <div class="bg-white rounded-2xl border border-[#E8D5C4] p-4 shadow-sm">
+      <div class="flex items-center justify-between mb-3">
+        <div class="flex items-center gap-2">
+          <span class="text-lg">🍇</span>
+          <span class="text-sm font-bold text-[#2a1818]">탄닌</span>
         </div>
-        <input type="range" min="0" max="5" step="0.1" value="2.5"
-          style="background: linear-gradient(to right, #722f37 50%, #E8D5C4 50%);"
-        />
-        <div class="flex justify-between mt-1">
-          <span class="text-[9px] text-[#B09090]">부드러움</span>
-          <span class="text-[9px] text-[#B09090]">강함</span>
-        </div>
+        <span class="text-sm font-bold text-[#722f37] bg-[#722f37]/10 px-2.5 py-0.5 rounded-full">2.5</span>
       </div>
-
-      <!-- 산미 슬라이더 -->
-      <div class="bg-white rounded-2xl border border-[#E8D5C4] p-4 shadow-sm">
-        <div class="flex items-center justify-between mb-3">
-          <div class="flex items-center gap-1.5">
-            <span class="text-base">🍋</span>
-            <span class="text-xs font-bold text-[#2a1818]">산미</span>
-          </div>
-          <span class="text-xs font-bold text-[#722f37] bg-[#722f37]/10 px-2 py-0.5 rounded-full">3.0</span>
-        </div>
-        <input type="range" min="0" max="5" step="0.1" value="3.0"
-          style="background: linear-gradient(to right, #722f37 60%, #E8D5C4 60%);"
-        />
-        <div class="flex justify-between mt-1">
-          <span class="text-[9px] text-[#B09090]">낮음</span>
-          <span class="text-[9px] text-[#B09090]">높음</span>
-        </div>
+      <input type="range" min="0" max="5" step="0.1" value="2.5"
+        style="background: linear-gradient(to right, #722f37 50%, #E8D5C4 50%);"
+      />
+      <div class="flex justify-between mt-1.5">
+        <span class="text-xs text-[#B09090]">부드러움</span>
+        <span class="text-xs text-[#B09090]">강함</span>
       </div>
-
-      <!-- 바디감 슬라이더 -->
-      <div class="bg-white rounded-2xl border border-[#E8D5C4] p-4 shadow-sm">
-        <div class="flex items-center justify-between mb-3">
-          <div class="flex items-center gap-1.5">
-            <span class="text-base">⚖️</span>
-            <span class="text-xs font-bold text-[#2a1818]">바디감</span>
-          </div>
-          <span class="text-xs font-bold text-[#722f37] bg-[#722f37]/10 px-2 py-0.5 rounded-full">3.5</span>
-        </div>
-        <input type="range" min="0" max="5" step="0.1" value="3.5"
-          style="background: linear-gradient(to right, #722f37 70%, #E8D5C4 70%);"
-        />
-        <div class="flex justify-between mt-1">
-          <span class="text-[9px] text-[#B09090]">가벼움</span>
-          <span class="text-[9px] text-[#B09090]">묵직함</span>
-        </div>
-      </div>
-
-      <!-- 당도 슬라이더 -->
-      <div class="bg-white rounded-2xl border border-[#E8D5C4] p-4 shadow-sm">
-        <div class="flex items-center justify-between mb-3">
-          <div class="flex items-center gap-1.5">
-            <span class="text-base">🍯</span>
-            <span class="text-xs font-bold text-[#2a1818]">당도</span>
-          </div>
-          <span class="text-xs font-bold text-[#722f37] bg-[#722f37]/10 px-2 py-0.5 rounded-full">1.5</span>
-        </div>
-        <input type="range" min="0" max="5" step="0.1" value="1.5"
-          style="background: linear-gradient(to right, #722f37 30%, #E8D5C4 30%);"
-        />
-        <div class="flex justify-between mt-1">
-          <span class="text-[9px] text-[#B09090]">드라이</span>
-          <span class="text-[9px] text-[#B09090]">달콤함</span>
-        </div>
-      </div>
-
     </div>
+
+    <!-- 산미 슬라이더 -->
+    <div class="bg-white rounded-2xl border border-[#E8D5C4] p-4 shadow-sm">
+      <div class="flex items-center justify-between mb-3">
+        <div class="flex items-center gap-2">
+          <span class="text-lg">🍋</span>
+          <span class="text-sm font-bold text-[#2a1818]">산미</span>
+        </div>
+        <span class="text-sm font-bold text-[#722f37] bg-[#722f37]/10 px-2.5 py-0.5 rounded-full">3.0</span>
+      </div>
+      <input type="range" min="0" max="5" step="0.1" value="3.0"
+        style="background: linear-gradient(to right, #722f37 60%, #E8D5C4 60%);"
+      />
+      <div class="flex justify-between mt-1.5">
+        <span class="text-xs text-[#B09090]">낮음</span>
+        <span class="text-xs text-[#B09090]">높음</span>
+      </div>
+    </div>
+
+    <!-- 바디감 슬라이더 -->
+    <div class="bg-white rounded-2xl border border-[#E8D5C4] p-4 shadow-sm">
+      <div class="flex items-center justify-between mb-3">
+        <div class="flex items-center gap-2">
+          <span class="text-lg">⚖️</span>
+          <span class="text-sm font-bold text-[#2a1818]">바디감</span>
+        </div>
+        <span class="text-sm font-bold text-[#722f37] bg-[#722f37]/10 px-2.5 py-0.5 rounded-full">3.5</span>
+      </div>
+      <input type="range" min="0" max="5" step="0.1" value="3.5"
+        style="background: linear-gradient(to right, #722f37 70%, #E8D5C4 70%);"
+      />
+      <div class="flex justify-between mt-1.5">
+        <span class="text-xs text-[#B09090]">가벼움</span>
+        <span class="text-xs text-[#B09090]">묵직함</span>
+      </div>
+    </div>
+
+    <!-- 당도 슬라이더 -->
+    <div class="bg-white rounded-2xl border border-[#E8D5C4] p-4 shadow-sm">
+      <div class="flex items-center justify-between mb-3">
+        <div class="flex items-center gap-2">
+          <span class="text-lg">🍯</span>
+          <span class="text-sm font-bold text-[#2a1818]">당도</span>
+        </div>
+        <span class="text-sm font-bold text-[#722f37] bg-[#722f37]/10 px-2.5 py-0.5 rounded-full">1.5</span>
+      </div>
+      <input type="range" min="0" max="5" step="0.1" value="1.5"
+        style="background: linear-gradient(to right, #722f37 30%, #E8D5C4 30%);"
+      />
+      <div class="flex justify-between mt-1.5">
+        <span class="text-xs text-[#B09090]">드라이</span>
+        <span class="text-xs text-[#B09090]">달콤함</span>
+      </div>
+    </div>
+
   </div>
 
   <!-- 하단 버튼 영역 -->

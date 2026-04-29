@@ -70,7 +70,15 @@
       "mcp__talk-to-figma__set_focus",
       "mcp__talk-to-figma__delete_multiple_nodes",
       "mcp__talk-to-figma__read_my_design",
-      "Bash(grep -E \"\\\\.\\(css|ts|tsx\\)$\")"
+      "Bash(grep -E \"\\\\.\\(css|ts|tsx\\)$\")",
+      "Bash(dir C:\\\\Users\\\\sh088\\\\wine-recommend\\\\winelab-app\\\\app:*)",
+      "Bash(git:*)",
+      "mcp__TalkToFigma__scan_text_nodes",
+      "mcp__TalkToFigma__get_node_info",
+      "mcp__TalkToFigma__create_text",
+      "mcp__TalkToFigma__create_rectangle",
+      "mcp__TalkToFigma__set_fill_color",
+      "Bash(grep -n \"text-xl\" C:/Users/sh088/wine-recommend/winelab-app/wireframes/*.html)"
     ]
   }
 }

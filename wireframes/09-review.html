@@ -18,6 +18,9 @@
 .star-btn.active {
   background: #722f37; border-color: #722f37; color: white;
 }
+.star-btn.low-active {
+  background: #e53e3e; border-color: #e53e3e; color: white;
+}
 .reason-btn {
   padding: 8px 14px;
   border-radius: 12px; border: 1.5px solid #E8D5C4;
@@ -28,10 +31,62 @@
   background: #722f37; border-color: #722f37; color: white; font-weight: 700;
 }
 textarea { resize: none; }
+
+/* 모달 오버레이 */
+.modal-overlay {
+  position: fixed; inset: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex; align-items: center; justify-content: center;
+  z-index: 100;
+  opacity: 0; pointer-events: none;
+  transition: opacity 0.2s;
+}
+.modal-overlay.open {
+  opacity: 1; pointer-events: auto;
+}
+.modal-box {
+  width: 320px;
+  background: white; border-radius: 20px;
+  padding: 24px 20px;
+  transform: translateY(20px);
+  transition: transform 0.2s;
+}
+.modal-overlay.open .modal-box {
+  transform: translateY(0);
+}
 </style>
 </head>
 <body class="bg-gray-200 flex justify-center items-start min-h-screen py-8">
 
+<!-- ========== 저점수 이유 모달 ========== -->
+<div id="lowScoreModal" class="modal-overlay">
+  <div class="modal-box">
+    <!-- 모달 헤더 -->
+    <div class="flex items-center gap-2 mb-1">
+      <span class="text-2xl" id="modalEmoji">🍇</span>
+      <div>
+        <p class="text-[#2a1818] font-bold text-sm" id="modalTitle">탄닌이 아쉬우셨나요?</p>
+        <p class="text-[#8B6B6B] text-[11px] mt-0.5">어떤 점이 아쉬우셨는지 알려주세요</p>
+      </div>
+    </div>
+    <div class="h-px bg-[#E8D5C4] my-3"></div>
+    <!-- 이유 버튼들 -->
+    <div id="modalReasons" class="flex flex-wrap gap-2 mb-4">
+      <!-- JavaScript로 동적 생성 -->
+    </div>
+    <!-- 버튼 영역 -->
+    <div class="flex gap-2 mt-2">
+      <button onclick="closeModal()" class="flex-1 h-10 rounded-xl border border-[#E8D5C4] text-[#8B6B6B] text-sm font-medium">
+        건너뛰기
+      </button>
+      <button onclick="confirmModal()" class="flex-1 h-10 rounded-xl bg-[#722f37] text-white text-sm font-bold">
+        확인
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- ========== 메인 화면 ========== -->
 <div class="w-[390px] min-h-[844px] bg-[#FFF8F0] flex flex-col overflow-hidden shadow-2xl rounded-3xl">
 
   <!-- 상태바 -->
@@ -67,20 +122,18 @@ textarea { resize: none; }
       <h3 class="text-sm font-bold text-[#2a1818] mb-3 flex items-center gap-1.5">
         <span>🍇</span> 탄닌은 어땠나요?
       </h3>
-      <!-- 별점 버튼 -->
-      <div class="flex gap-2 justify-center mb-3">
-        <button class="star-btn">1</button>
-        <button class="star-btn active">2</button>
-        <button class="star-btn">3</button>
-        <button class="star-btn">4</button>
-        <button class="star-btn">5</button>
+      <div class="flex gap-2 justify-center mb-3" id="stars-tannin">
+        <button class="star-btn" onclick="selectStar('tannin', 1, this, '🍇', '탄닌이 아쉬우셨나요?', ['탄닌이 너무 강해요', '탄닌이 너무 약해요'])">1</button>
+        <button class="star-btn active low-active" onclick="selectStar('tannin', 2, this, '🍇', '탄닌이 아쉬우셨나요?', ['탄닌이 너무 강해요', '탄닌이 너무 약해요'])">2</button>
+        <button class="star-btn" onclick="selectStar('tannin', 3, this, '🍇', '탄닌이 아쉬우셨나요?', ['탄닌이 너무 강해요', '탄닌이 너무 약해요'])">3</button>
+        <button class="star-btn" onclick="selectStar('tannin', 4, this, '🍇', '탄닌이 아쉬우셨나요?', ['탄닌이 너무 강해요', '탄닌이 너무 약해요'])">4</button>
+        <button class="star-btn" onclick="selectStar('tannin', 5, this, '🍇', '탄닌이 아쉬우셨나요?', ['탄닌이 너무 강해요', '탄닌이 너무 약해요'])">5</button>
       </div>
-      <!-- 저점수 이유 (1~2점 선택 시 노출) -->
-      <div class="bg-[#FFF8F0] rounded-xl p-3 border border-[#E8D5C4]">
-        <p class="text-[11px] text-[#8B6B6B] mb-2 font-medium">어떤 점이 아쉬웠나요?</p>
+      <!-- 저점수 이유 인라인 (모달 열린 뒤 선택 결과 표시) -->
+      <div id="inline-tannin" class="bg-[#FFF8F0] rounded-xl p-3 border border-[#E8D5C4]">
+        <p class="text-[11px] text-[#8B6B6B] mb-2 font-medium">선택한 이유</p>
         <div class="flex gap-2 flex-wrap">
-          <button class="reason-btn selected">탄닌이 너무 강해요</button>
-          <button class="reason-btn">탄닌이 너무 약해요</button>
+          <span class="text-[11px] bg-[#f0e0d0] text-[#722f37] px-2.5 py-1 rounded-full font-semibold">탄닌이 너무 강해요</span>
         </div>
       </div>
     </div>
@@ -90,12 +143,16 @@ textarea { resize: none; }
       <h3 class="text-sm font-bold text-[#2a1818] mb-3 flex items-center gap-1.5">
         <span>🍋</span> 산미는 어땠나요?
       </h3>
-      <div class="flex gap-2 justify-center">
-        <button class="star-btn">1</button>
-        <button class="star-btn">2</button>
-        <button class="star-btn active">3</button>
-        <button class="star-btn">4</button>
-        <button class="star-btn">5</button>
+      <div class="flex gap-2 justify-center mb-3">
+        <button class="star-btn" onclick="selectStar('acidity', 1, this, '🍋', '산미가 아쉬우셨나요?', ['산미가 너무 강해요', '산미가 너무 약해요'])">1</button>
+        <button class="star-btn" onclick="selectStar('acidity', 2, this, '🍋', '산미가 아쉬우셨나요?', ['산미가 너무 강해요', '산미가 너무 약해요'])">2</button>
+        <button class="star-btn active" onclick="selectStar('acidity', 3, this, '🍋', '산미가 아쉬우셨나요?', ['산미가 너무 강해요', '산미가 너무 약해요'])">3</button>
+        <button class="star-btn" onclick="selectStar('acidity', 4, this, '🍋', '산미가 아쉬우셨나요?', ['산미가 너무 강해요', '산미가 너무 약해요'])">4</button>
+        <button class="star-btn" onclick="selectStar('acidity', 5, this, '🍋', '산미가 아쉬우셨나요?', ['산미가 너무 강해요', '산미가 너무 약해요'])">5</button>
+      </div>
+      <div id="inline-acidity" class="bg-[#FFF8F0] rounded-xl p-3 border border-[#E8D5C4]" style="display:none">
+        <p class="text-[11px] text-[#8B6B6B] mb-2 font-medium">선택한 이유</p>
+        <div class="flex gap-2 flex-wrap"></div>
       </div>
     </div>
 
@@ -104,12 +161,16 @@ textarea { resize: none; }
       <h3 class="text-sm font-bold text-[#2a1818] mb-3 flex items-center gap-1.5">
         <span>⚖️</span> 바디감은 어땠나요?
       </h3>
-      <div class="flex gap-2 justify-center">
-        <button class="star-btn">1</button>
-        <button class="star-btn">2</button>
-        <button class="star-btn">3</button>
-        <button class="star-btn active">4</button>
-        <button class="star-btn">5</button>
+      <div class="flex gap-2 justify-center mb-3">
+        <button class="star-btn" onclick="selectStar('body', 1, this, '⚖️', '바디감이 아쉬우셨나요?', ['바디감이 너무 무거워요', '바디감이 너무 가벼워요'])">1</button>
+        <button class="star-btn" onclick="selectStar('body', 2, this, '⚖️', '바디감이 아쉬우셨나요?', ['바디감이 너무 무거워요', '바디감이 너무 가벼워요'])">2</button>
+        <button class="star-btn" onclick="selectStar('body', 3, this, '⚖️', '바디감이 아쉬우셨나요?', ['바디감이 너무 무거워요', '바디감이 너무 가벼워요'])">3</button>
+        <button class="star-btn active" onclick="selectStar('body', 4, this, '⚖️', '바디감이 아쉬우셨나요?', ['바디감이 너무 무거워요', '바디감이 너무 가벼워요'])">4</button>
+        <button class="star-btn" onclick="selectStar('body', 5, this, '⚖️', '바디감이 아쉬우셨나요?', ['바디감이 너무 무거워요', '바디감이 너무 가벼워요'])">5</button>
+      </div>
+      <div id="inline-body" class="bg-[#FFF8F0] rounded-xl p-3 border border-[#E8D5C4]" style="display:none">
+        <p class="text-[11px] text-[#8B6B6B] mb-2 font-medium">선택한 이유</p>
+        <div class="flex gap-2 flex-wrap"></div>
       </div>
     </div>
 
@@ -118,18 +179,21 @@ textarea { resize: none; }
       <h3 class="text-sm font-bold text-[#2a1818] mb-3 flex items-center gap-1.5">
         <span>🍯</span> 당도는 어땠나요?
       </h3>
-      <div class="flex gap-2 justify-center">
-        <button class="star-btn">1</button>
-        <button class="star-btn">2</button>
-        <button class="star-btn active">3</button>
-        <button class="star-btn">4</button>
-        <button class="star-btn">5</button>
+      <div class="flex gap-2 justify-center mb-3">
+        <button class="star-btn" onclick="selectStar('sweet', 1, this, '🍯', '당도가 아쉬우셨나요?', ['너무 달아요', '너무 드라이해요'])">1</button>
+        <button class="star-btn" onclick="selectStar('sweet', 2, this, '🍯', '당도가 아쉬우셨나요?', ['너무 달아요', '너무 드라이해요'])">2</button>
+        <button class="star-btn active" onclick="selectStar('sweet', 3, this, '🍯', '당도가 아쉬우셨나요?', ['너무 달아요', '너무 드라이해요'])">3</button>
+        <button class="star-btn" onclick="selectStar('sweet', 4, this, '🍯', '당도가 아쉬우셨나요?', ['너무 달아요', '너무 드라이해요'])">4</button>
+        <button class="star-btn" onclick="selectStar('sweet', 5, this, '🍯', '당도가 아쉬우셨나요?', ['너무 달아요', '너무 드라이해요'])">5</button>
+      </div>
+      <div id="inline-sweet" class="bg-[#FFF8F0] rounded-xl p-3 border border-[#E8D5C4]" style="display:none">
+        <p class="text-[11px] text-[#8B6B6B] mb-2 font-medium">선택한 이유</p>
+        <div class="flex gap-2 flex-wrap"></div>
       </div>
     </div>
 
-    <!-- 테이스팅 노트 (shadcn textarea 스타일) -->
+    <!-- 테이스팅 노트 -->
     <div class="bg-white rounded-2xl border border-[#E8D5C4] shadow-sm overflow-hidden">
-      <!-- 노트 헤더 (일기 스타일) -->
       <div class="px-4 py-3 border-b border-[#E8D5C4] flex items-center gap-2">
         <span class="text-base">🗒️</span>
         <div>
@@ -137,12 +201,10 @@ textarea { resize: none; }
           <p class="text-[10px] text-[#8B6B6B]">선택 사항</p>
         </div>
       </div>
-      <!-- 날짜 헤더 -->
       <div class="px-4 pt-3 pb-1">
         <p class="text-[11px] font-bold text-[#722f37]">📅 2026년 3월 22일</p>
         <div class="h-px bg-[#E8D5C4] mt-2"></div>
       </div>
-      <!-- 텍스트 에리어 -->
       <textarea
         rows="5"
         placeholder="오늘 이 와인은...&#10;(어떤 음식과 함께였나요? 어떤 향이 느껴졌나요? 특별한 순간이었나요?)"
@@ -169,6 +231,108 @@ textarea { resize: none; }
   <span>|</span>
   <a href="10-ocr.html" class="hover:underline">10 스캔 →</a>
 </div>
+
+<script>
+// 현재 모달에 연결된 정보
+let currentMetric = null;
+let currentReasons = [];
+let currentInlineId = null;
+let selectedReason = null;
+
+// 별점 선택 함수
+function selectStar(metric, score, clickedBtn, emoji, title, reasons) {
+  const container = clickedBtn.parentElement;
+  const buttons = container.querySelectorAll('.star-btn');
+
+  // 별점 버튼 상태 업데이트 — 선택한 버튼 하나만 활성화
+  buttons.forEach((btn, idx) => {
+    btn.classList.remove('active', 'low-active');
+    if (idx + 1 === score) {
+      if (score <= 2) {
+        btn.classList.add('active', 'low-active');
+      } else {
+        btn.classList.add('active');
+      }
+    }
+  });
+
+  // 2점 이하일 때 모달 열기
+  if (score <= 2) {
+    currentMetric = metric;
+    currentReasons = reasons;
+    currentInlineId = 'inline-' + metric;
+    selectedReason = null;
+
+    // 모달 내용 설정
+    document.getElementById('modalEmoji').textContent = emoji;
+    document.getElementById('modalTitle').textContent = title;
+
+    // 이유 버튼 생성
+    const reasonsContainer = document.getElementById('modalReasons');
+    reasonsContainer.innerHTML = '';
+    reasons.forEach(reason => {
+      const btn = document.createElement('button');
+      btn.className = 'reason-btn';
+      btn.textContent = reason;
+      btn.onclick = () => selectReason(btn, reason);
+      reasonsContainer.appendChild(btn);
+    });
+
+    // 모달 열기
+    document.getElementById('lowScoreModal').classList.add('open');
+  } else {
+    // 3점 이상이면 인라인 이유 영역 숨기기
+    const inlineEl = document.getElementById('inline-' + metric);
+    if (inlineEl) inlineEl.style.display = 'none';
+  }
+}
+
+// 이유 선택 함수
+function selectReason(btn, reason) {
+  document.querySelectorAll('#modalReasons .reason-btn').forEach(b => b.classList.remove('selected'));
+  btn.classList.add('selected');
+  selectedReason = reason;
+}
+
+// 모달 닫기
+function closeModal() {
+  document.getElementById('lowScoreModal').classList.remove('open');
+}
+
+// 모달 확인 — 인라인 영역에 선택 결과 반영
+function confirmModal() {
+  if (currentInlineId) {
+    const inlineEl = document.getElementById(currentInlineId);
+    if (inlineEl) {
+      if (selectedReason) {
+        inlineEl.style.display = 'block';
+        inlineEl.querySelector('.flex').innerHTML =
+          `<span class="text-[11px] bg-[#f0e0d0] text-[#722f37] px-2.5 py-1 rounded-full font-semibold">${selectedReason}</span>`;
+      } else {
+        inlineEl.style.display = 'none';
+      }
+    }
+  }
+  closeModal();
+}
+
+// 초기 상태: 탄닌 인라인 표시 (2점 선택된 초기 상태 반영)
+document.addEventListener('DOMContentLoaded', () => {
+  const inlineTannin = document.getElementById('inline-tannin');
+  if (inlineTannin) inlineTannin.style.display = 'block';
+
+  // 나머지 metric 인라인 숨기기
+  ['acidity', 'body', 'sweet'].forEach(m => {
+    const el = document.getElementById('inline-' + m);
+    if (el) el.style.display = 'none';
+  });
+});
+
+// 모달 외부 클릭 시 닫기
+document.getElementById('lowScoreModal').addEventListener('click', function(e) {
+  if (e.target === this) closeModal();
+});
+</script>
 
 </body>
 </html>
