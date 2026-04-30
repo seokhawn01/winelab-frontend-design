@@ -44,93 +44,35 @@
     <h2 class="text-[#2a1818] text-xl font-bold mb-1">계정 만들기</h2>
     <p class="text-[#8B6B6B] text-xs mb-6">정보를 입력해 WineLab을 시작하세요</p>
 
-    <!-- 이름 -->
-    <div class="mb-4">
-      <label class="block text-xs font-semibold text-[#4A3030] mb-1.5">이름</label>
-      <input
-        type="text"
-        placeholder="홍길동"
-        class="w-full h-12 px-4 border-[1.5px] border-[#E8D5C4] rounded-xl text-sm bg-white text-[#2a1818] placeholder-[#B09090]"
-        style="outline:none;"
-      />
-    </div>
-
-    <!-- 이메일 -->
-    <div class="mb-4">
-      <label class="block text-xs font-semibold text-[#4A3030] mb-1.5">이메일</label>
-      <input
-        type="email"
-        placeholder="user@example.com"
-        class="w-full h-12 px-4 border-[1.5px] border-[#E8D5C4] rounded-xl text-sm bg-white text-[#2a1818] placeholder-[#B09090]"
-        style="outline:none;"
-      />
-    </div>
-
-    <!-- 비밀번호 -->
-    <div class="mb-4">
-      <label class="block text-xs font-semibold text-[#4A3030] mb-1.5">비밀번호</label>
-      <input
-        type="password"
-        placeholder="8자 이상 입력"
-        class="w-full h-12 px-4 border-[1.5px] border-[#E8D5C4] rounded-xl text-sm bg-white text-[#2a1818] placeholder-[#B09090]"
-        style="outline:none;"
-      />
-      <!-- 비밀번호 강도 바 -->
-      <div class="flex gap-1 mt-2">
-        <div class="flex-1 h-1 rounded-full bg-[#722f37]"></div>
-        <div class="flex-1 h-1 rounded-full bg-[#722f37]"></div>
-        <div class="flex-1 h-1 rounded-full bg-[#E8D5C4]"></div>
-        <div class="flex-1 h-1 rounded-full bg-[#E8D5C4]"></div>
-      </div>
-      <p class="text-[10px] text-[#8B6B6B] mt-1">보통 강도</p>
-    </div>
-
-    <!-- 비밀번호 확인 -->
-    <div class="mb-6">
-      <label class="block text-xs font-semibold text-[#4A3030] mb-1.5">비밀번호 확인</label>
-      <input
-        type="password"
-        placeholder="비밀번호 재입력"
-        class="w-full h-12 px-4 border-[1.5px] border-[#E8D5C4] rounded-xl text-sm bg-white text-[#2a1818] placeholder-[#B09090]"
-        style="outline:none;"
-      />
-    </div>
-
-    <!-- 약관 동의 (shadcn checkbox 스타일) -->
-    <div class="bg-white rounded-xl border border-[#E8D5C4] p-4 mb-6 flex flex-col gap-3">
-      <label class="flex items-center gap-3 cursor-pointer">
-        <div class="w-5 h-5 rounded border-2 border-[#722f37] bg-[#722f37] flex items-center justify-center flex-shrink-0">
-          <svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-        </div>
-        <span class="text-xs font-semibold text-[#2a1818]">전체 동의</span>
-      </label>
-      <div class="h-px bg-[#E8D5C4]"></div>
-      <label class="flex items-center gap-3 cursor-pointer">
-        <div class="w-5 h-5 rounded border-2 border-[#722f37] bg-[#722f37] flex items-center justify-center flex-shrink-0">
-          <svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-        </div>
-        <div class="flex items-center justify-between flex-1">
-          <span class="text-xs text-[#4A3030]">[필수] 이용약관 동의</span>
-          <span class="text-[10px] text-[#722f37] font-medium">보기</span>
-        </div>
-      </label>
-      <label class="flex items-center gap-3 cursor-pointer">
-        <div class="w-5 h-5 rounded border-2 border-[#722f37] bg-[#722f37] flex items-center justify-center flex-shrink-0">
-          <svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-        </div>
-        <div class="flex items-center justify-between flex-1">
-          <span class="text-xs text-[#4A3030]">[필수] 개인정보 처리방침 동의</span>
-          <span class="text-[10px] text-[#722f37] font-medium">보기</span>
-        </div>
-      </label>
-    </div>
-
-    <!-- 가입 버튼 -->
-    <a href="03-onboarding.html">
-      <button class="w-full h-12 bg-[#722f37] text-white rounded-xl font-bold text-[15px]" style="box-shadow: 0 4px 14px rgba(114,47,55,0.35);">
-        가입하기 →
+    <!-- 카카오 로그인 버튼 -->
+    <a href="03-onboarding.html" class="block mb-3">
+      <button class="w-full h-12 rounded-xl font-bold text-[15px] flex items-center justify-center gap-2.5" style="background:#FEE500; color:#000000;">
+        <!-- 카카오 말풍선 아이콘 -->
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M10 2C5.582 2 2 4.91 2 8.5c0 2.278 1.392 4.278 3.5 5.455l-.89 3.211a.25.25 0 0 0 .38.274L9.13 14.97c.29.02.582.03.87.03 4.418 0 8-2.91 8-6.5S14.418 2 10 2z" fill="#000000"/>
+        </svg>
+        카카오로 시작하기
       </button>
     </a>
+
+    <!-- 구글 로그인 버튼 -->
+    <a href="03-onboarding.html" class="block mb-6">
+      <button class="w-full h-12 bg-white rounded-xl font-bold text-[15px] flex items-center justify-center gap-2.5 border-[1.5px] border-[#E8D5C4]" style="color:#3c4043;">
+        <!-- 구글 G 로고 -->
+        <svg width="20" height="20" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+          <path fill="#EA4335" d="M24 9.5c3.14 0 5.95 1.08 8.17 2.85l6.1-6.1C34.46 3.19 29.56 1 24 1 14.82 1 7.01 6.48 3.69 14.26l7.1 5.52C12.56 13.16 17.82 9.5 24 9.5z"/>
+          <path fill="#4285F4" d="M46.52 24.5c0-1.64-.15-3.22-.42-4.74H24v8.98h12.65c-.55 2.93-2.2 5.41-4.68 7.08l7.2 5.59C43.32 37.21 46.52 31.33 46.52 24.5z"/>
+          <path fill="#FBBC05" d="M10.79 28.22A14.5 14.5 0 0 1 9.5 24c0-1.47.25-2.89.69-4.22l-7.1-5.52A23.94 23.94 0 0 0 0 24c0 3.86.92 7.51 2.54 10.74l8.25-6.52z"/>
+          <path fill="#34A853" d="M24 47c5.56 0 10.22-1.84 13.63-5l-7.2-5.59c-1.85 1.24-4.22 1.98-6.43 1.98-6.18 0-11.44-3.66-13.21-9.17l-8.25 6.52C7.01 41.52 14.82 47 24 47z"/>
+        </svg>
+        Google로 시작하기
+      </button>
+    </a>
+
+    <!-- 약관 안내 -->
+    <p class="text-center text-[11px] text-[#B09090] leading-relaxed mb-2">
+      가입 시 <span class="text-[#722f37] font-medium">이용약관</span> 및 <span class="text-[#722f37] font-medium">개인정보 처리방침</span>에<br>동의하는 것으로 간주됩니다.
+    </p>
 
     <p class="text-center text-xs text-[#8B6B6B] mt-4">
       이미 계정이 있으신가요?

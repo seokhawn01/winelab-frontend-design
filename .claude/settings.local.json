@@ -78,7 +78,9 @@
       "mcp__TalkToFigma__create_text",
       "mcp__TalkToFigma__create_rectangle",
       "mcp__TalkToFigma__set_fill_color",
-      "Bash(grep -n \"text-xl\" C:/Users/sh088/wine-recommend/winelab-app/wireframes/*.html)"
+      "Bash(grep -n \"text-xl\" C:/Users/sh088/wine-recommend/winelab-app/wireframes/*.html)",
+      "Bash(python -m http.server 8765)",
+      "Bash(echo \"서버 PID: $!\")"
     ]
   },
   "hooks": {

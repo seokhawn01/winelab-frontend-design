@@ -1,2 +1,59 @@
 [09:11:48] PreToolUse             Write          FILE: C:\Users\sh088\wine-recommend\winelab-app\test.txt
 [09:11:48] PostToolUse            Write          4ms
+[09:16:42] PreToolUse             Agent          
+[09:16:42] PostToolUse            Agent          3ms
+[09:16:45] PreToolUse             Glob           
+[09:16:45] PostToolUse            Glob           44ms
+[09:16:48] PreToolUse             Read           FILE: C:\Users\sh088\wine-recommend\winelab-app\wireframes\01-login.html
+[09:16:48] PreToolUse             Read           FILE: C:\Users\sh088\wine-recommend\winelab-app\wireframes\03-onboarding.html
+[09:16:48] PostToolUse            Read           1ms
+[09:16:48] PostToolUse            Read           1ms
+[09:16:51] PreToolUse             Read           FILE: C:\Users\sh088\wine-recommend\winelab-app\wireframes\02-signup.html
+[09:16:52] PreToolUse             Read           FILE: C:\Users\sh088\wine-recommend\winelab-app\wireframes\04-home.html
+[09:16:52] PostToolUse            Read           1ms
+[09:16:52] PreToolUse             Read           FILE: C:\Users\sh088\wine-recommend\winelab-app\wireframes\05-recommend.html
+[09:16:52] PostToolUse            Read           2ms
+[09:16:52] PostToolUse            Read           1ms
+[09:16:55] PreToolUse             Read           FILE: C:\Users\sh088\wine-recommend\winelab-app\wireframes\06-wine-detail.html
+[09:16:55] PostToolUse            Read           1ms
+[09:16:55] PreToolUse             Read           FILE: C:\Users\sh088\wine-recommend\winelab-app\wireframes\07-search.html
+[09:16:55] PreToolUse             Read           FILE: C:\Users\sh088\wine-recommend\winelab-app\wireframes\08-mypage.html
+[09:16:55] PostToolUse            Read           0ms
+[09:16:55] PostToolUse            Read           0ms
+[09:16:58] PreToolUse             Read           FILE: C:\Users\sh088\wine-recommend\winelab-app\wireframes\09-review.html
+[09:16:58] PostToolUse            Read           0ms
+[09:16:58] PreToolUse             Read           FILE: C:\Users\sh088\wine-recommend\winelab-app\wireframes\10-ocr.html
+[09:16:58] PostToolUse            Read           0ms
+[09:17:34] PreToolUse             ToolSearch     
+[09:17:35] PostToolUse            ToolSearch     1ms
+[09:18:00] PreToolUse             Write          FILE: C:\Users\sh088\.claude\plans\wireframes-02-signup-html-piped-wilkinson.md
+[09:18:00] PostToolUse            Write          24ms
+[09:18:02] PreToolUse             ExitPlanMode   
+[09:19:17] PreToolUse             Edit           FILE: C:\Users\sh088\.claude\plans\wireframes-02-signup-html-piped-wilkinson.md
+[09:19:17] PostToolUse            Edit           7ms
+[09:19:22] PreToolUse             Edit           FILE: C:\Users\sh088\.claude\plans\wireframes-02-signup-html-piped-wilkinson.md
+[09:19:23] PostToolUse            Edit           3ms
+[09:19:24] PreToolUse             ExitPlanMode   
+[09:19:38] PostToolUse            ExitPlanMode   17ms
+[09:19:42] PreToolUse             ToolSearch     
+[09:19:42] PostToolUse            ToolSearch     1ms
+[09:19:45] PreToolUse             mcp__playwright__browser_navigate 
+[09:19:46] PostToolUseFailure     mcp__playwright__browser_navigate ERR: ### Error
+Error: Access to "file:" URL is blocked. Allowed protocols: http:, https:, about:, data:. Attempted URL: file:
+[09:19:51] PreToolUse             Bash           CMD: cd C:/Users/sh088/wine-recommend/winelab-app/wireframes && python -m http.server 8765 2>&1 &
+echo "서버 PID: $!"
+[09:20:02] PostToolUse            Bash           60ms
+[09:20:04] PreToolUse             mcp__playwright__browser_navigate 
+[09:20:07] PostToolUse            mcp__playwright__browser_navigate 2960ms
+[09:20:11] PreToolUse             mcp__playwright__browser_take_screenshot 
+[09:20:12] PostToolUse            mcp__playwright__browser_take_screenshot 300ms
+[09:20:48] PreToolUse             Edit           FILE: C:\Users\sh088\wine-recommend\winelab-app\wireframes\02-signup.html
+[09:20:50] PostToolUse            Edit           55ms
+[09:20:55] PreToolUse             mcp__playwright__browser_navigate 
+[09:20:56] PostToolUse            mcp__playwright__browser_navigate 202ms
+[09:21:01] PreToolUse             Read           FILE: C:\Users\sh088\wine-recommend\winelab-app\wireframes\02-signup.html
+[09:21:01] PostToolUse            Read           5ms
+[09:21:05] PreToolUse             mcp__playwright__browser_navigate 
+[09:21:06] PostToolUse            mcp__playwright__browser_navigate 123ms
+[09:21:09] PreToolUse             mcp__playwright__browser_take_screenshot 
+[09:21:10] PostToolUse            mcp__playwright__browser_take_screenshot 135ms
