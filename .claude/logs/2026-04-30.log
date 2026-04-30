@@ -57,3 +57,168 @@ echo "서버 PID: $!"
 [09:21:06] PostToolUse            mcp__playwright__browser_navigate 123ms
 [09:21:09] PreToolUse             mcp__playwright__browser_take_screenshot 
 [09:21:10] PostToolUse            mcp__playwright__browser_take_screenshot 135ms
+[09:27:27] PreToolUse             Read           FILE: C:\Users\sh088\wine-recommend\winelab-app\wireframes\01-login.html
+[09:27:28] PostToolUse            Read           1ms
+[09:28:05] PreToolUse             Edit           FILE: C:\Users\sh088\wine-recommend\winelab-app\wireframes\01-login.html
+[09:28:05] PostToolUse            Edit           7ms
+[09:28:08] PreToolUse             mcp__playwright__browser_navigate 
+[09:28:09] PostToolUse            mcp__playwright__browser_navigate 613ms
+[09:28:11] PreToolUse             mcp__playwright__browser_take_screenshot 
+[09:28:12] PostToolUse            mcp__playwright__browser_take_screenshot 151ms
+[09:32:47] PreToolUse             Edit           FILE: C:\Users\sh088\wine-recommend\winelab-app\wireframes\08-mypage.html
+[09:32:48] PostToolUse            Edit           6ms
+[09:32:53] PreToolUse             Edit           FILE: C:\Users\sh088\wine-recommend\winelab-app\wireframes\08-mypage.html
+[09:32:53] PostToolUse            Edit           6ms
+[09:32:56] PreToolUse             Edit           FILE: C:\Users\sh088\wine-recommend\winelab-app\wireframes\08-mypage.html
+[09:32:57] PostToolUse            Edit           5ms
+[09:33:00] PreToolUse             mcp__playwright__browser_navigate 
+[09:33:01] PostToolUse            mcp__playwright__browser_navigate 861ms
+[09:33:10] PreToolUse             Bash           CMD: cd C:/Users/sh088/wine-recommend/winelab-app && python -m http.server 8766 2>&1 &
+echo "서버 PID: $!"
+[09:33:24] PostToolUse            Bash           63ms
+[09:33:26] PreToolUse             mcp__playwright__browser_navigate 
+[09:33:28] PostToolUse            mcp__playwright__browser_navigate 2045ms
+[09:33:33] PreToolUse             mcp__playwright__browser_take_screenshot 
+[09:33:33] PostToolUse            mcp__playwright__browser_take_screenshot 209ms
+[09:34:48] PreToolUse             Read           FILE: c:\Users\sh088\OneDrive\사진\Screenshots\스크린샷 2026-04-30 093423.png
+[09:35:00] PostToolUse            Read           29ms
+[09:35:25] PreToolUse             Edit           FILE: C:\Users\sh088\wine-recommend\winelab-app\wireframes\08-mypage.html
+[09:35:25] PostToolUse            Edit           6ms
+[09:35:29] PreToolUse             Edit           FILE: C:\Users\sh088\wine-recommend\winelab-app\wireframes\08-mypage.html
+[09:35:29] PostToolUse            Edit           3ms
+[09:35:32] PreToolUse             mcp__playwright__browser_navigate 
+[09:35:32] PostToolUse            mcp__playwright__browser_navigate 240ms
+[09:35:36] PreToolUse             mcp__playwright__browser_take_screenshot 
+[09:35:36] PostToolUse            mcp__playwright__browser_take_screenshot 123ms
+[09:35:47] PreToolUse             ToolSearch     
+[09:35:47] PostToolUse            ToolSearch     2ms
+[09:35:51] PreToolUse             mcp__playwright__browser_take_screenshot 
+[09:35:51] PostToolUse            mcp__playwright__browser_take_screenshot 125ms
+[09:38:59] PreToolUse             Read           FILE: C:\Users\sh088\wine-recommend\winelab-app\wireframes\08-mypage.html
+[09:38:59] PostToolUse            Read           1ms
+[09:39:02] PreToolUse             Grep           
+[09:39:02] PostToolUse            Grep           53ms
+[09:39:13] PreToolUse             Read           FILE: C:\Users\sh088\wine-recommend\winelab-app\wireframes\08-mypage.html
+[09:39:13] PostToolUse            Read           1ms
+[09:39:48] PreToolUse             Edit           FILE: C:\Users\sh088\wine-recommend\winelab-app\wireframes\08-mypage.html
+[09:39:48] PostToolUse            Edit           5ms
+[09:39:54] PreToolUse             Edit           FILE: C:\Users\sh088\wine-recommend\winelab-app\wireframes\08-mypage.html
+[09:39:55] PostToolUse            Edit           5ms
+[09:40:02] PreToolUse             Edit           FILE: C:\Users\sh088\wine-recommend\winelab-app\wireframes\08-mypage.html
+[09:40:02] PostToolUse            Edit           7ms
+[09:40:05] PreToolUse             ToolSearch     
+[09:40:06] PostToolUse            ToolSearch     2ms
+[09:40:08] PreToolUse             mcp__playwright__browser_navigate 
+[09:40:09] PostToolUse            mcp__playwright__browser_navigate 278ms
+[09:40:11] PreToolUse             mcp__playwright__browser_take_screenshot 
+[09:40:12] PostToolUse            mcp__playwright__browser_take_screenshot 119ms
+[09:40:17] PreToolUse             mcp__playwright__browser_take_screenshot 
+[09:40:18] PostToolUse            mcp__playwright__browser_take_screenshot 175ms
+[09:44:52] PreToolUse             Read           FILE: C:\Users\sh088\wine-recommend\winelab-app\wireframes\08-mypage.html
+[09:44:52] PostToolUse            Read           2ms
+[09:45:03] PreToolUse             Edit           FILE: C:\Users\sh088\wine-recommend\winelab-app\wireframes\08-mypage.html
+[09:45:04] PostToolUse            Edit           4ms
+[09:45:15] PreToolUse             Edit           FILE: C:\Users\sh088\wine-recommend\winelab-app\wireframes\08-mypage.html
+[09:45:15] PostToolUse            Edit           4ms
+[09:45:18] PreToolUse             mcp__playwright__browser_navigate 
+[09:45:19] PostToolUse            mcp__playwright__browser_navigate 187ms
+[09:45:21] PreToolUse             mcp__playwright__browser_take_screenshot 
+[09:45:22] PostToolUse            mcp__playwright__browser_take_screenshot 112ms
+[09:46:55] PreToolUse             Glob           
+[09:46:56] PostToolUse            Glob           725ms
+[09:46:59] PreToolUse             Grep           
+[09:47:00] PostToolUse            Grep           59ms
+[09:47:03] PreToolUse             Grep           
+[09:47:04] PostToolUse            Grep           53ms
+[09:47:04] PreToolUse             Grep           
+[09:47:05] PostToolUse            Grep           61ms
+[09:47:14] PreToolUse             Read           FILE: C:\Users\sh088\wine-recommend\winelab-app\wireframes\04-home.html
+[09:47:15] PostToolUse            Read           1ms
+[09:47:15] PreToolUse             Read           FILE: C:\Users\sh088\wine-recommend\winelab-app\wireframes\05-recommend.html
+[09:47:15] PostToolUse            Read           1ms
+[09:47:16] PreToolUse             Read           FILE: C:\Users\sh088\wine-recommend\winelab-app\wireframes\07-search.html
+[09:47:16] PostToolUse            Read           5ms
+[09:47:16] PreToolUse             Read           FILE: C:\Users\sh088\wine-recommend\winelab-app\wireframes\10-ocr.html
+[09:47:17] PostToolUse            Read           1ms
+[09:48:18] PreToolUse             Edit           FILE: C:\Users\sh088\wine-recommend\winelab-app\wireframes\04-home.html
+[09:48:18] PostToolUse            Edit           6ms
+[09:48:20] PreToolUse             Edit           FILE: C:\Users\sh088\wine-recommend\winelab-app\wireframes\05-recommend.html
+[09:48:20] PostToolUse            Edit           7ms
+[09:48:21] PreToolUse             Edit           FILE: C:\Users\sh088\wine-recommend\winelab-app\wireframes\07-search.html
+[09:48:22] PostToolUse            Edit           6ms
+[09:48:23] PreToolUse             Edit           FILE: C:\Users\sh088\wine-recommend\winelab-app\wireframes\10-ocr.html
+[09:48:23] PostToolUse            Edit           8ms
+[09:48:35] PreToolUse             Edit           FILE: C:\Users\sh088\wine-recommend\winelab-app\wireframes\04-home.html
+[09:48:35] PostToolUse            Edit           5ms
+[09:48:39] PreToolUse             Edit           FILE: C:\Users\sh088\wine-recommend\winelab-app\wireframes\05-recommend.html
+[09:48:39] PostToolUse            Edit           3ms
+[09:48:44] PreToolUse             Edit           FILE: C:\Users\sh088\wine-recommend\winelab-app\wireframes\07-search.html
+[09:48:44] PostToolUse            Edit           4ms
+[09:48:48] PreToolUse             Edit           FILE: C:\Users\sh088\wine-recommend\winelab-app\wireframes\10-ocr.html
+[09:48:48] PostToolUse            Edit           3ms
+[09:48:59] PreToolUse             Edit           FILE: C:\Users\sh088\wine-recommend\winelab-app\wireframes\04-home.html
+[09:49:00] PostToolUse            Edit           4ms
+[09:49:03] PreToolUse             Edit           FILE: C:\Users\sh088\wine-recommend\winelab-app\wireframes\05-recommend.html
+[09:49:03] PostToolUse            Edit           4ms
+[09:49:07] PreToolUse             Edit           FILE: C:\Users\sh088\wine-recommend\winelab-app\wireframes\07-search.html
+[09:49:07] PostToolUse            Edit           3ms
+[09:49:11] PreToolUse             Edit           FILE: C:\Users\sh088\wine-recommend\winelab-app\wireframes\10-ocr.html
+[09:49:11] PostToolUse            Edit           3ms
+[09:49:15] PreToolUse             Edit           FILE: C:\Users\sh088\wine-recommend\winelab-app\wireframes\05-recommend.html
+[09:49:16] PostToolUse            Edit           3ms
+[09:49:19] PreToolUse             mcp__playwright__browser_navigate 
+[09:49:20] PostToolUse            mcp__playwright__browser_navigate 383ms
+[09:49:23] PreToolUse             mcp__playwright__browser_take_screenshot 
+[09:49:23] PostToolUse            mcp__playwright__browser_take_screenshot 196ms
+[09:49:30] PreToolUse             mcp__playwright__browser_navigate 
+[09:49:30] PostToolUse            mcp__playwright__browser_navigate 353ms
+[09:49:34] PreToolUse             mcp__playwright__browser_take_screenshot 
+[09:49:34] PostToolUse            mcp__playwright__browser_take_screenshot 177ms
+[09:49:37] PreToolUse             mcp__playwright__browser_navigate 
+[09:49:37] PostToolUse            mcp__playwright__browser_navigate 251ms
+[09:49:40] PreToolUse             mcp__playwright__browser_take_screenshot 
+[09:49:41] PostToolUse            mcp__playwright__browser_take_screenshot 195ms
+[09:49:44] PreToolUse             mcp__playwright__browser_navigate 
+[09:49:45] PostToolUse            mcp__playwright__browser_navigate 295ms
+[09:49:48] PreToolUse             mcp__playwright__browser_take_screenshot 
+[09:49:49] PostToolUse            mcp__playwright__browser_take_screenshot 540ms
+[09:56:43] PreToolUse             Edit           FILE: C:\Users\sh088\wine-recommend\winelab-app\wireframes\07-search.html
+[09:56:44] PostToolUse            Edit           4ms
+[09:56:51] PreToolUse             Edit           FILE: C:\Users\sh088\wine-recommend\winelab-app\wireframes\07-search.html
+[09:56:52] PostToolUse            Edit           4ms
+[09:56:54] PreToolUse             mcp__playwright__browser_navigate 
+[09:56:55] PostToolUse            mcp__playwright__browser_navigate 198ms
+[09:56:58] PreToolUse             mcp__playwright__browser_take_screenshot 
+[09:56:58] PostToolUse            mcp__playwright__browser_take_screenshot 122ms
+[10:31:21] PreToolUse             mcp__playwright__browser_navigate 
+[10:31:21] PostToolUse            mcp__playwright__browser_navigate 355ms
+[10:31:24] PreToolUse             mcp__playwright__browser_take_screenshot 
+[10:31:24] PostToolUse            mcp__playwright__browser_take_screenshot 128ms
+[10:31:27] PreToolUse             mcp__playwright__browser_navigate 
+[10:31:27] PostToolUse            mcp__playwright__browser_navigate 187ms
+[10:31:31] PreToolUse             mcp__playwright__browser_take_screenshot 
+[10:31:31] PostToolUse            mcp__playwright__browser_take_screenshot 144ms
+[10:31:35] PreToolUse             mcp__playwright__browser_navigate 
+[10:31:36] PostToolUse            mcp__playwright__browser_navigate 236ms
+[10:31:40] PreToolUse             mcp__playwright__browser_take_screenshot 
+[10:31:40] PostToolUse            mcp__playwright__browser_take_screenshot 189ms
+[10:31:43] PreToolUse             mcp__playwright__browser_navigate 
+[10:31:44] PostToolUse            mcp__playwright__browser_navigate 276ms
+[10:31:47] PreToolUse             mcp__playwright__browser_take_screenshot 
+[10:31:48] PostToolUse            mcp__playwright__browser_take_screenshot 125ms
+[10:31:51] PreToolUse             mcp__playwright__browser_navigate 
+[10:31:51] PostToolUse            mcp__playwright__browser_navigate 189ms
+[10:31:55] PreToolUse             mcp__playwright__browser_take_screenshot 
+[10:31:55] PostToolUse            mcp__playwright__browser_take_screenshot 119ms
+[10:31:58] PreToolUse             mcp__playwright__browser_navigate 
+[10:31:59] PostToolUse            mcp__playwright__browser_navigate 206ms
+[10:32:59] PreToolUse             mcp__playwright__browser_take_screenshot 
+[10:32:59] PostToolUse            mcp__playwright__browser_take_screenshot 149ms
+[10:33:10] PreToolUse             mcp__playwright__browser_navigate 
+[10:33:10] PostToolUse            mcp__playwright__browser_navigate 369ms
+[10:33:14] PreToolUse             mcp__playwright__browser_take_screenshot 
+[10:33:14] PostToolUse            mcp__playwright__browser_take_screenshot 456ms
+[10:33:18] PreToolUse             mcp__playwright__browser_navigate 
+[10:33:19] PostToolUse            mcp__playwright__browser_navigate 234ms
+[10:33:24] PreToolUse             mcp__playwright__browser_take_screenshot 
+[10:33:25] PostToolUse            mcp__playwright__browser_take_screenshot 507ms

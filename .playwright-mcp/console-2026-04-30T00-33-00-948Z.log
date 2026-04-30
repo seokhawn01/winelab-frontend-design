@@ -1,0 +1,5 @@
+[      21ms] [WARNING] The value "390px" for key "width" was truncated to its numeric prefix. @ http://localhost:8765/08-mypage.html?v=2:4
+[      27ms] [ERROR] Failed to load resource: the server responded with a status of 404 (File not found) @ http://localhost:8765/components/ui/person.png:0
+[      98ms] [WARNING] cdn.tailwindcss.com should not be used in production. To use Tailwind CSS in production, install it as a PostCSS plugin or use the Tailwind CLI: https://tailwindcss.com/docs/installation @ https://cdn.tailwindcss.com/:63
+[     189ms] [ERROR] Failed to load resource: the server responded with a status of 404 (File not found) @ http://localhost:8765/components/ui/person.png:0
+[     525ms] [ERROR] Failed to load resource: the server responded with a status of 404 (File not found) @ http://localhost:8765/favicon.ico:0

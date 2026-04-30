@@ -1,0 +1,3 @@
+[    1825ms] [WARNING] The value "390px" for key "width" was truncated to its numeric prefix. @ http://localhost:8766/wireframes/08-mypage.html:4
+[    1849ms] [WARNING] cdn.tailwindcss.com should not be used in production. To use Tailwind CSS in production, install it as a PostCSS plugin or use the Tailwind CLI: https://tailwindcss.com/docs/installation @ https://cdn.tailwindcss.com/:63
+[    2018ms] [ERROR] Failed to load resource: the server responded with a status of 404 (File not found) @ http://localhost:8766/favicon.ico:0
