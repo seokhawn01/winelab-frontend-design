@@ -222,3 +222,101 @@ echo "서버 PID: $!"
 [10:33:19] PostToolUse            mcp__playwright__browser_navigate 234ms
 [10:33:24] PreToolUse             mcp__playwright__browser_take_screenshot 
 [10:33:25] PostToolUse            mcp__playwright__browser_take_screenshot 507ms
+[14:03:36] PreToolUse             ToolSearch     
+[14:03:36] PostToolUse            ToolSearch     3ms
+[14:03:44] PreToolUse             mcp__playwright__browser_resize 
+[14:03:45] PostToolUse            mcp__playwright__browser_resize 500ms
+[14:03:47] PreToolUse             mcp__playwright__browser_navigate 
+[14:03:48] PostToolUseFailure     mcp__playwright__browser_navigate ERR: ### Error
+Error: Access to "file:" URL is blocked. Allowed protocols: http:, https:, about:, data:. Attempted URL: file:
+[14:03:56] PreToolUse             Bash           CMD: cd "C:/Users/sh088/wine-recommend/winelab-app/wireframes" && npx --yes http-server . -p 8787 --cors -s &
+sleep 3 && echo
+[14:04:31] PostToolUse            Bash           13302ms
+[14:04:33] PreToolUse             mcp__playwright__browser_navigate 
+[14:04:35] PostToolUse            mcp__playwright__browser_navigate 855ms
+[14:04:38] PreToolUse             mcp__playwright__browser_take_screenshot 
+[14:04:40] PostToolUse            mcp__playwright__browser_take_screenshot 1265ms
+[14:04:44] PreToolUse             mcp__playwright__browser_navigate 
+[14:04:44] PostToolUse            mcp__playwright__browser_navigate 215ms
+[14:04:47] PreToolUse             mcp__playwright__browser_take_screenshot 
+[14:04:49] PostToolUse            mcp__playwright__browser_take_screenshot 1894ms
+[14:04:52] PreToolUse             mcp__playwright__browser_navigate 
+[14:04:52] PostToolUse            mcp__playwright__browser_navigate 172ms
+[14:04:55] PreToolUse             mcp__playwright__browser_take_screenshot 
+[14:04:58] PostToolUse            mcp__playwright__browser_take_screenshot 2100ms
+[14:05:00] PreToolUse             mcp__playwright__browser_navigate 
+[14:05:01] PostToolUse            mcp__playwright__browser_navigate 287ms
+[14:05:04] PreToolUse             mcp__playwright__browser_take_screenshot 
+[14:05:08] PostToolUse            mcp__playwright__browser_take_screenshot 3653ms
+[14:05:11] PreToolUse             mcp__playwright__browser_navigate 
+[14:05:11] PostToolUse            mcp__playwright__browser_navigate 241ms
+[14:05:14] PreToolUse             mcp__playwright__browser_take_screenshot 
+[14:05:17] PostToolUse            mcp__playwright__browser_take_screenshot 2598ms
+[14:05:20] PreToolUse             mcp__playwright__browser_navigate 
+[14:05:20] PostToolUse            mcp__playwright__browser_navigate 238ms
+[14:05:24] PreToolUse             mcp__playwright__browser_take_screenshot 
+[14:05:28] PostToolUse            mcp__playwright__browser_take_screenshot 3159ms
+[14:05:30] PreToolUse             mcp__playwright__browser_navigate 
+[14:05:31] PostToolUse            mcp__playwright__browser_navigate 216ms
+[14:05:35] PreToolUse             mcp__playwright__browser_take_screenshot 
+[14:05:37] PostToolUse            mcp__playwright__browser_take_screenshot 2107ms
+[14:05:40] PreToolUse             mcp__playwright__browser_navigate 
+[14:05:40] PostToolUse            mcp__playwright__browser_navigate 228ms
+[14:05:44] PreToolUse             mcp__playwright__browser_take_screenshot 
+[14:05:47] PostToolUse            mcp__playwright__browser_take_screenshot 3119ms
+[14:05:50] PreToolUse             mcp__playwright__browser_navigate 
+[14:05:51] PostToolUse            mcp__playwright__browser_navigate 182ms
+[14:05:54] PreToolUse             mcp__playwright__browser_take_screenshot 
+[14:05:57] PostToolUse            mcp__playwright__browser_take_screenshot 2413ms
+[14:06:00] PreToolUse             mcp__playwright__browser_navigate 
+[14:06:00] PostToolUse            mcp__playwright__browser_navigate 283ms
+[14:06:04] PreToolUse             mcp__playwright__browser_take_screenshot 
+[14:06:07] PostToolUse            mcp__playwright__browser_take_screenshot 3129ms
+[14:07:40] PreToolUse             mcp__playwright__browser_resize 
+[14:07:41] PostToolUse            mcp__playwright__browser_resize 22ms
+[14:07:43] PreToolUse             mcp__playwright__browser_navigate 
+[14:07:44] PostToolUse            mcp__playwright__browser_navigate 136ms
+[14:07:47] PreToolUse             mcp__playwright__browser_take_screenshot 
+[14:07:49] PostToolUse            mcp__playwright__browser_take_screenshot 1790ms
+[14:09:07] PreToolUse             Read           FILE: C:\Users\sh088\wine-recommend\winelab-app\.playwright-mcp\page-2026-04-30T05-07-49-063Z.png
+[14:09:08] PostToolUse            Read           18ms
+[14:09:49] PreToolUse             mcp__playwright__browser_navigate 
+[14:09:49] PostToolUse            mcp__playwright__browser_navigate 204ms
+[14:09:53] PreToolUse             mcp__playwright__browser_take_screenshot 
+[14:09:57] PostToolUse            mcp__playwright__browser_take_screenshot 3097ms
+[14:10:00] PreToolUse             mcp__playwright__browser_navigate 
+[14:10:01] PostToolUse            mcp__playwright__browser_navigate 146ms
+[14:10:04] PreToolUse             mcp__playwright__browser_take_screenshot 
+[14:10:05] PostToolUse            mcp__playwright__browser_take_screenshot 1092ms
+[14:10:08] PreToolUse             mcp__playwright__browser_navigate 
+[14:10:09] PostToolUse            mcp__playwright__browser_navigate 166ms
+[14:10:12] PreToolUse             mcp__playwright__browser_take_screenshot 
+[14:10:15] PostToolUse            mcp__playwright__browser_take_screenshot 2110ms
+[14:10:17] PreToolUse             mcp__playwright__browser_navigate 
+[14:10:18] PostToolUse            mcp__playwright__browser_navigate 191ms
+[14:10:22] PreToolUse             mcp__playwright__browser_take_screenshot 
+[14:10:26] PostToolUse            mcp__playwright__browser_take_screenshot 3103ms
+[14:10:29] PreToolUse             mcp__playwright__browser_navigate 
+[14:10:30] PostToolUse            mcp__playwright__browser_navigate 232ms
+[14:10:33] PreToolUse             mcp__playwright__browser_take_screenshot 
+[14:10:37] PostToolUse            mcp__playwright__browser_take_screenshot 3123ms
+[14:10:40] PreToolUse             mcp__playwright__browser_navigate 
+[14:10:40] PostToolUse            mcp__playwright__browser_navigate 179ms
+[14:10:45] PreToolUse             mcp__playwright__browser_take_screenshot 
+[14:10:48] PostToolUse            mcp__playwright__browser_take_screenshot 3124ms
+[14:10:52] PreToolUse             mcp__playwright__browser_navigate 
+[14:10:52] PostToolUse            mcp__playwright__browser_navigate 178ms
+[14:10:56] PreToolUse             mcp__playwright__browser_take_screenshot 
+[14:10:58] PostToolUse            mcp__playwright__browser_take_screenshot 2092ms
+[14:11:02] PreToolUse             mcp__playwright__browser_navigate 
+[14:11:02] PostToolUse            mcp__playwright__browser_navigate 197ms
+[14:11:06] PreToolUse             mcp__playwright__browser_take_screenshot 
+[14:11:08] PostToolUse            mcp__playwright__browser_take_screenshot 1098ms
+[14:11:11] PreToolUse             mcp__playwright__browser_navigate 
+[14:11:11] PostToolUse            mcp__playwright__browser_navigate 206ms
+[14:11:15] PreToolUse             mcp__playwright__browser_take_screenshot 
+[14:11:16] PostToolUse            mcp__playwright__browser_take_screenshot 1130ms
+[14:11:20] PreToolUse             mcp__playwright__browser_navigate 
+[14:11:20] PostToolUse            mcp__playwright__browser_navigate 236ms
+[14:11:24] PreToolUse             mcp__playwright__browser_take_screenshot 
+[14:11:27] PostToolUse            mcp__playwright__browser_take_screenshot 2117ms

@@ -81,7 +81,19 @@
       "Bash(grep -n \"text-xl\" C:/Users/sh088/wine-recommend/winelab-app/wireframes/*.html)",
       "Bash(python -m http.server 8765)",
       "Bash(echo \"서버 PID: $!\")",
-      "Bash(python -m http.server 8766)"
+      "Bash(python -m http.server 8766)",
+      "Bash(npx --yes http-server . -p 8787 --cors -s)",
+      "Bash(Get-ChildItem -Path \"C:\\\\Users\\\\sh088\\\\wine-recommend\\\\winelab-app\" -Recurse -Depth 3)",
+      "Bash(Select-Object FullName, PSIsContainer)",
+      "Bash(Format-Table -AutoSize)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "Bash(grep -E \"\\\\.\\(ts|tsx|js|jsx\\)$\")",
+      "Bash(python search_wine.py \"Malbec\" -n 3)",
+      "Bash(python search_wine.py \"Chateau Margaux\" -n 3)",
+      "Bash(python test_search.py)",
+      "Bash(python search_wine.py \"Malbec\" -n 2 --details)",
+      "Bash(python -c ' *)",
+      "Bash(python search_wine.py \"Unendlich Riesling Smaragd\" -n 5)"
     ]
   },
   "hooks": {
