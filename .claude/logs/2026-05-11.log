@@ -1,0 +1,209 @@
+[09:48:08] PreToolUse             Read           FILE: C:\Users\sh088\wine-recommend\winelab-app\wireframes\06-wine-detail.html
+[09:48:09] PostToolUse            Read           16ms
+[09:49:00] PreToolUse             Bash           CMD: cd "C:\Users\sh088\wine-recommend\winelab-app\viviner" && python -c "
+import requests, json, io, sys
+sys.stdout = io.Tex
+[09:49:17] PostToolUse            Bash           14375ms
+[09:49:32] PreToolUse             Bash           CMD: cd "C:\Users\sh088\wine-recommend\winelab-app\viviner" && python -c "
+import requests, json, io, sys
+sys.stdout = io.Tex
+[09:49:54] PostToolUse            Bash           6535ms
+[09:50:20] PreToolUse             Bash           CMD: cd "C:\Users\sh088\wine-recommend\winelab-app\viviner" && python -c "
+import requests, json, io, sys
+sys.stdout = io.Tex
+[09:50:39] PostToolUse            Bash           6678ms
+[09:56:17] PreToolUse             Read           FILE: C:\Users\sh088\wine-recommend\winelab-app\viviner\import_to_db.py
+[09:56:17] PreToolUse             Read           FILE: C:\Users\sh088\wine-recommend\winelab-app\viviner\search_wine.py
+[09:56:18] PostToolUseFailure     Read           ERR: File does not exist. Note: your current working directory is C:\Users\sh088\wine-recommend\winelab-app\viviner.
+[09:56:18] PostToolUseFailure     Read           ERR: File does not exist. Note: your current working directory is C:\Users\sh088\wine-recommend\winelab-app\viviner.
+[09:56:24] PreToolUse             Bash           CMD: ls "C:\Users\sh088\wine-recommend\winelab-app\viviner\"
+[09:56:30] PostToolUseFailure     Bash           ERR: Exit code 2
+/usr/bin/bash: eval: line 1: unexpected EOF while looking for matching `"'
+[09:56:34] PreToolUse             Glob           
+[09:56:35] PostToolUse            Glob           52ms
+[09:56:56] PreToolUse             Glob           
+[09:57:10] PostToolUse            Glob           1388ms
+[09:57:16] PreToolUse             Bash           CMD: ls /c/Users/sh088/wine-recommend/winelab-app/viviner/
+[09:57:21] PostToolUse            Bash           4508ms
+[09:57:31] PreToolUse             Bash           CMD: find /c/Users/sh088/wine-recommend -name "search_wine.py" 2>/dev/null
+[09:57:48] PostToolUse            Bash           5622ms
+[09:58:00] PreToolUse             Bash           CMD: ls /c/Users/sh088/wine-recommend/winelab-app/viviner/__pycache__/ && find /c/Users/sh088/wine-recommend -name "wine_prof
+[09:58:06] PostToolUse            Bash           5376ms
+[09:59:17] PreToolUse             Bash           CMD: ls /c/Users/sh088/wine-recommend/winelab-app/viviner/ && echo "---" && ls /c/Users/sh088/wine-recommend/winelab-app/vivi
+[09:59:28] PostToolUse            Bash           10018ms
+[10:00:17] PreToolUse             Write          FILE: C:\Users\sh088\wine-recommend\winelab-app\viviner\search_wine.py
+[10:02:21] PostToolUse            Write          99ms
+[10:02:55] PreToolUse             Write          FILE: C:\Users\sh088\wine-recommend\winelab-app\viviner\wine_profile.py
+[10:02:55] PostToolUse            Write          23ms
+[10:03:28] PreToolUse             Write          FILE: C:\Users\sh088\wine-recommend\winelab-app\viviner\import_to_db.py
+[10:03:28] PostToolUse            Write          9ms
+[10:03:34] PreToolUse             Bash           CMD: ls /c/Users/sh088/wine-recommend/winelab-app/viviner/*.py 2>/dev/null
+[10:03:38] PostToolUse            Bash           4120ms
+[10:08:43] PreToolUse             Read           FILE: C:\Users\sh088\wine-recommend\winelab-app\viviner\import_to_db.py
+[10:08:43] PostToolUse            Read           31ms
+[10:08:56] PreToolUse             Edit           FILE: C:\Users\sh088\wine-recommend\winelab-app\viviner\import_to_db.py
+[10:08:57] PostToolUse            Edit           41ms
+[10:09:05] PreToolUse             Edit           FILE: C:\Users\sh088\wine-recommend\winelab-app\viviner\import_to_db.py
+[10:09:05] PostToolUse            Edit           25ms
+[10:09:18] PreToolUse             Edit           FILE: C:\Users\sh088\wine-recommend\winelab-app\viviner\import_to_db.py
+[10:09:18] PostToolUse            Edit           44ms
+[10:09:25] PreToolUse             Edit           FILE: C:\Users\sh088\wine-recommend\winelab-app\viviner\import_to_db.py
+[10:09:25] PostToolUse            Edit           22ms
+[10:12:37] PreToolUse             ToolSearch     
+[10:12:37] PostToolUse            ToolSearch     2ms
+[10:12:38] PreToolUse             Glob           
+[10:12:39] PostToolUse            Glob           549ms
+[10:12:43] PreToolUse             Read           FILE: C:\Users\sh088\wine-recommend\winelab-app\viviner\import_to_db.py
+[10:12:43] PreToolUse             Read           FILE: C:\Users\sh088\wine-recommend\winelab-app\viviner\wines_input.txt
+[10:12:43] PostToolUse            Read           11ms
+[10:12:44] PostToolUse            Read           6ms
+[10:12:53] PreToolUse             mcp__sequential-thinking__sequentialthinking 
+[10:13:07] PostToolUse            mcp__sequential-thinking__sequentialthinking 31ms
+[10:13:12] PreToolUse             mcp__sequential-thinking__sequentialthinking 
+[10:13:12] PostToolUse            mcp__sequential-thinking__sequentialthinking 12ms
+[10:13:17] PreToolUse             mcp__sequential-thinking__sequentialthinking 
+[10:13:17] PostToolUse            mcp__sequential-thinking__sequentialthinking 9ms
+[10:13:24] PreToolUse             mcp__sequential-thinking__sequentialthinking 
+[10:13:24] PostToolUse            mcp__sequential-thinking__sequentialthinking 10ms
+[10:13:29] PreToolUse             mcp__sequential-thinking__sequentialthinking 
+[10:13:30] PostToolUse            mcp__sequential-thinking__sequentialthinking 8ms
+[10:13:36] PreToolUse             mcp__sequential-thinking__sequentialthinking 
+[10:13:37] PostToolUse            mcp__sequential-thinking__sequentialthinking 12ms
+[10:13:45] PreToolUse             mcp__sequential-thinking__sequentialthinking 
+[10:13:45] PostToolUse            mcp__sequential-thinking__sequentialthinking 10ms
+[10:19:35] PreToolUse             Read           FILE: C:\Users\sh088\wine-recommend\winelab-app\viviner\import_to_db.py
+[10:19:36] PostToolUse            Read           2ms
+[10:20:09] PreToolUse             Write          FILE: C:\Users\sh088\wine-recommend\winelab-app\viviner\import_to_db.py
+[10:20:10] PostToolUse            Write          59ms
+[10:24:33] PreToolUse             Glob           
+[10:24:34] PostToolUse            Glob           373ms
+[10:24:37] PreToolUse             Read           FILE: C:\Users\sh088\wine-recommend\winelab-app\viviner\search_wine.py
+[10:24:37] PreToolUse             Read           FILE: C:\Users\sh088\wine-recommend\winelab-app\viviner\wine_profile.py
+[10:24:37] PostToolUse            Read           6ms
+[10:24:37] PostToolUse            Read           13ms
+[10:24:41] PreToolUse             Glob           
+[10:24:42] PostToolUse            Glob           307ms
+[10:24:46] PreToolUse             Read           FILE: C:\Users\sh088\wine-recommend\winelab-app\viviner\utils\requester.py
+[10:24:46] PreToolUse             Read           FILE: C:\Users\sh088\wine-recommend\winelab-app\viviner\utils\constants.py
+[10:24:46] PostToolUse            Read           10ms
+[10:24:47] PostToolUse            Read           6ms
+[10:25:15] PreToolUse             Edit           FILE: C:\Users\sh088\wine-recommend\winelab-app\viviner\utils\requester.py
+[10:25:15] PostToolUse            Edit           37ms
+[10:37:00] PreToolUse             Read           FILE: c:\Users\sh088\OneDrive\사진\Screenshots\스크린샷 2026-05-11 103101.png
+[10:37:02] PostToolUse            Read           221ms
+[10:46:09] PreToolUse             Write          FILE: C:\Users\sh088\wine-recommend\winelab-app\viviner\import_to_db.py
+[10:46:09] PostToolUse            Write          6ms
+[10:51:44] PreToolUse             Read           FILE: C:\Users\sh088\wine-recommend\winelab-app\viviner\search_wine.py
+[10:51:45] PostToolUse            Read           23ms
+[10:51:49] PreToolUse             Read           FILE: C:\Users\sh088\wine-recommend\winelab-app\viviner\search_wine.py
+[10:51:49] PostToolUse            Read           15ms
+[10:52:01] PreToolUse             Edit           FILE: C:\Users\sh088\wine-recommend\winelab-app\viviner\search_wine.py
+[10:52:02] PostToolUse            Edit           36ms
+[10:52:06] PreToolUse             Edit           FILE: C:\Users\sh088\wine-recommend\winelab-app\viviner\search_wine.py
+[10:52:06] PostToolUse            Edit           19ms
+[10:52:14] PreToolUse             Edit           FILE: C:\Users\sh088\wine-recommend\winelab-app\viviner\search_wine.py
+[10:52:14] PostToolUse            Edit           11ms
+[10:55:57] PreToolUse             ToolSearch     
+[10:55:58] PostToolUse            ToolSearch     1ms
+[10:55:58] PreToolUse             Bash           CMD: cd /c/Users/sh088/wine-recommend/winelab-app/viviner && python import_to_db.py wines_input.txt 2>&1
+[10:56:15] PostToolUse            Bash           15368ms
+[10:58:01] PreToolUse             mcp__playwright__browser_navigate 
+[10:58:09] PostToolUse            mcp__playwright__browser_navigate 7540ms
+[10:59:15] PreToolUse             Read           FILE: C:\Users\sh088\wine-recommend\winelab-app\viviner\scrap_wine_list.py
+[10:59:15] PreToolUse             Read           FILE: C:\Users\sh088\wine-recommend\winelab-app\viviner\scrap_wine_data.py
+[10:59:15] PostToolUse            Read           44ms
+[10:59:16] PostToolUse            Read           26ms
+[10:59:36] PreToolUse             Bash           CMD: python -c "
+import sys, io, json
+sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8', errors='replace')
+fr
+[10:59:57] PostToolUse            Bash           9695ms
+[11:00:14] PreToolUse             Bash           CMD: python -c "
+import sys, io, json
+sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8', errors='replace')
+fr
+[11:00:21] PostToolUse            Bash           6463ms
+[11:00:29] PreToolUse             mcp__playwright__browser_navigate 
+[11:00:34] PostToolUse            mcp__playwright__browser_navigate 3992ms
+[11:00:48] PreToolUse             ToolSearch     
+[11:00:49] PostToolUse            ToolSearch     2ms
+[11:00:55] PreToolUse             ToolSearch     
+[11:00:55] PostToolUse            ToolSearch     1ms
+[11:01:01] PreToolUse             mcp__playwright__browser_navigate 
+[11:01:04] PostToolUse            mcp__playwright__browser_navigate 2459ms
+[11:01:11] PreToolUse             mcp__playwright__browser_type 
+[11:02:56] PostToolUse            mcp__playwright__browser_type 2318ms
+[11:03:03] PreToolUse             mcp__playwright__browser_network_requests 
+[11:03:55] PostToolUse            mcp__playwright__browser_network_requests 45ms
+[11:04:06] PreToolUse             mcp__playwright__browser_evaluate 
+[11:04:14] PostToolUse            mcp__playwright__browser_evaluate 1053ms
+[11:04:19] PreToolUse             mcp__playwright__browser_evaluate 
+[11:04:21] PostToolUse            mcp__playwright__browser_evaluate 1070ms
+[11:04:25] PreToolUse             mcp__playwright__browser_evaluate 
+[11:04:27] PostToolUse            mcp__playwright__browser_evaluate 1034ms
+[11:04:33] PreToolUse             mcp__playwright__browser_evaluate 
+[11:04:35] PostToolUse            mcp__playwright__browser_evaluate 1060ms
+[11:04:44] PreToolUse             mcp__playwright__browser_evaluate 
+[11:04:46] PostToolUse            mcp__playwright__browser_evaluate 1051ms
+[11:04:57] PreToolUse             Bash           CMD: python -c "
+import requests, re
+
+headers = {
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/53
+[11:05:16] PostToolUse            Bash           6053ms
+[11:05:23] PreToolUse             Bash           CMD: python -c "
+import requests, re
+
+headers = {
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/53
+[11:05:34] PostToolUse            Bash           6231ms
+[11:05:39] PreToolUse             mcp__playwright__browser_evaluate 
+[11:05:41] PostToolUse            mcp__playwright__browser_evaluate 1060ms
+[11:05:47] PreToolUse             Bash           CMD: python -c "
+import requests, re
+
+headers = {
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/53
+[11:05:54] PostToolUse            Bash           5978ms
+[11:06:04] PreToolUse             mcp__playwright__browser_evaluate 
+[11:06:08] PostToolUse            mcp__playwright__browser_evaluate 4075ms
+[11:06:21] PreToolUse             Bash           CMD: python -c "
+import requests, re
+
+headers = {
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/53
+[11:06:39] PostToolUse            Bash           5907ms
+[11:06:50] PreToolUse             Bash           CMD: python -c "
+import requests, re
+
+headers = {
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/53
+[11:07:05] PostToolUse            Bash           7482ms
+[11:07:17] PreToolUse             mcp__playwright__browser_evaluate 
+[11:07:19] PostToolUse            mcp__playwright__browser_evaluate 1054ms
+[11:07:25] PreToolUse             mcp__playwright__browser_evaluate 
+[11:07:26] PostToolUse            mcp__playwright__browser_evaluate 1058ms
+[11:07:31] PreToolUse             mcp__playwright__browser_type 
+[11:07:33] PostToolUse            mcp__playwright__browser_type 2364ms
+[11:07:37] PreToolUse             mcp__playwright__browser_evaluate 
+[11:07:38] PostToolUse            mcp__playwright__browser_evaluate 1044ms
+[11:07:49] PreToolUse             Bash           CMD: python -c "
+import requests, json, sys, io
+sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8', errors='re
+[11:07:55] PostToolUse            Bash           5468ms
+[11:08:04] PreToolUse             Bash           CMD: python -c "
+import requests, json, sys, io
+sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8', errors='re
+[11:08:11] PostToolUse            Bash           6526ms
+[11:08:19] PreToolUse             Bash           CMD: python -c "
+import requests, json, sys, io
+sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8', errors='re
+[11:09:33] PostToolUse            Bash           5774ms
+[11:11:33] PreToolUse             Write          FILE: C:\Users\sh088\wine-recommend\winelab-app\viviner\search_wine.py
+[11:11:33] PostToolUse            Write          10ms
+[11:11:40] PreToolUse             Bash           CMD: python -c "
+import os
+from dotenv import load_dotenv
+import mysql.connector
+load_dotenv('/c/Users/sh088/wine-recommend/w
+[11:11:45] PreToolUse             Bash           CMD: python import_to_db.py wines_input.txt --force 2>&1

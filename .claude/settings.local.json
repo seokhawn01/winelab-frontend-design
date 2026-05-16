@@ -93,7 +93,13 @@
       "Bash(python test_search.py)",
       "Bash(python search_wine.py \"Malbec\" -n 2 --details)",
       "Bash(python -c ' *)",
-      "Bash(python search_wine.py \"Unendlich Riesling Smaragd\" -n 5)"
+      "Bash(python search_wine.py \"Unendlich Riesling Smaragd\" -n 5)",
+      "mcp__sequential-thinking__sequentialthinking",
+      "Bash(python import_to_db.py wines_input.txt)",
+      "Bash(python *)",
+      "mcp__playwright__browser_type",
+      "mcp__playwright__browser_network_requests",
+      "mcp__playwright__browser_evaluate"
     ]
   },
   "hooks": {

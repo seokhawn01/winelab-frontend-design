@@ -1,51 +1,21 @@
-import * as React from "react"
-import { Pressable, type PressableProps } from "react-native"
+"use client";
+import { TouchableOpacity, Text } from "react-native";
 
-type Variant = "default" | "outline" | "secondary" | "ghost" | "destructive" | "link"
-type Size = "default" | "xs" | "sm" | "lg" | "icon"
-
-const variantClass: Record<Variant, string> = {
-  default: "bg-primary items-center justify-center",
-  outline: "border border-border bg-background items-center justify-center",
-  secondary: "bg-secondary items-center justify-center",
-  ghost: "items-center justify-center",
-  destructive: "bg-red-100 items-center justify-center",
-  link: "items-center justify-center",
+interface ButtonProps {
+  children: string;
+  onPress: () => void;
+  variant?: "primary" | "outline";
 }
 
-const sizeClass: Record<Size, string> = {
-  default: "h-12 px-4 flex-row gap-2 rounded-lg",
-  xs: "h-6 px-2 rounded-md",
-  sm: "h-9 px-3 rounded-lg",
-  lg: "h-14 px-6 rounded-lg",
-  icon: "w-12 h-12 rounded-lg",
-}
-
-interface ButtonProps extends PressableProps {
-  variant?: Variant
-  size?: Size
-  className?: string
-}
-
-function Button({
-  variant = "default",
-  size = "default",
-  className,
-  disabled,
-  ...props
-}: ButtonProps) {
-  const classes = [variantClass[variant], sizeClass[size], disabled ? "opacity-50" : "", className]
-    .filter(Boolean)
-    .join(" ")
+export default function Button({ children, onPress, variant = "primary" }: ButtonProps) {
+  const containerClass =
+    variant === "primary"
+      ? "w-full bg-winelab-600 rounded-xl py-3.5 items-center"
+      : "w-full border border-winelab-300 rounded-xl py-3.5 items-center";
 
   return (
-    <Pressable
-      className={classes}
-      disabled={disabled}
-      {...props}
-    />
-  )
+    <TouchableOpacity className={containerClass} onPress={onPress} activeOpacity={0.8}>
+      <Text className="text-white text-base font-semibold">{children}</Text>
+    </TouchableOpacity>
+  );
 }
-
-export { Button }
-export type { ButtonProps }
