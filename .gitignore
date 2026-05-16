@@ -42,3 +42,7 @@ yarn-error.*
 .env
 .env
 .env
+
+# Claude Code 로컬 파일
+.claude/logs/
+.claude/settings.local.json
