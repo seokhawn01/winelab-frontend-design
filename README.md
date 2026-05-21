@@ -35,12 +35,6 @@
 - 페어링 추천 결과 화면
 - 백엔드 API (`/api/wines`, `/api/recommend`)
 
-### 📋 예정
-
-- 소믈리에 AI 채팅 (Claude API + Vivino DB RAG)
-- 음식 사진 업로드 → 자동 와인 추천
-- 사용자 컬렉션 · 캘린더 · 리뷰
-
 ---
 
 ## 프로젝트 구조
